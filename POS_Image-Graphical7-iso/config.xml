@@ -21,6 +21,7 @@
         <keytable>us</keytable>
         <timezone>Asia/Singapore</timezone>
         <hwclock>utc</hwclock>
+    </preferences>
     
         <preferences profiles="Disk">
         <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 

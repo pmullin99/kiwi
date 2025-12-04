@@ -6,6 +6,7 @@
         <contact>admin@example.com</contact>
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
+   
     <preferences>
         <version>7.1.0</version>
         <packagemanager>zypper</packagemanager>
