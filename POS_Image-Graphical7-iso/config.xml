@@ -23,8 +23,7 @@
       filesystem="ext4"
       kernelcmdline="splash"
       installiso="true"
-      initrd_system="dracut" 
-      compressed="true">
+      initrd_system="dracut">
   <size unit="M">8192</size>
   <oemconfig>
       <oem-resize>true</oem-resize>
