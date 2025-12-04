@@ -107,6 +107,7 @@
         <package name="kiwi-tools"/>
         <package name="dosfstools"/>
         <package name="dracut-kiwi-oem-repart"/>
+        <package name="dracut-kiwi-oem-dump"/>
         
     </packages>
     <packages type="bootstrap">
