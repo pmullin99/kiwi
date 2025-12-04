@@ -18,9 +18,9 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type image="oem" filesystem="xfs" kernelcmdline="splash" firmware="uefi" bootpartition="true" bootfilesystem="ext4"></type>
-     <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi">
+        
+        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi">
+            <bootloader name="grub2"/>
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
@@ -28,6 +28,7 @@
                 <oem-multipath-scan>false</oem-multipath-scan>
             </oemconfig>
         </type>
+    
     
     </preferences>
 
