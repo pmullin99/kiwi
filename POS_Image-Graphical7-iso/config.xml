@@ -6,11 +6,8 @@
         <contact>admin@example.com</contact>
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
-     <profiles>
-        <profile name="Disk" description="Expandable Disk image"/>
-    </profiles>
-    
-    <preferences profiles="Disk">
+   
+    <preferences>
         <version>7.1.0</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
