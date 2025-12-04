@@ -16,13 +16,15 @@
     <preferences>
         <version>1.15.3</version>
         <packagemanager>zypper</packagemanager>
+         <rpm-excludedocs>true</rpm-excludedocs>
+        <rpm-check-signatures>false</rpm-check-signatures>
+        <bootsplash-theme>SLE</bootsplash-theme>
+        <bootloader-theme>SLE</bootloader-theme>
         <locale>en_US</locale>
         <keytable>us</keytable>
-        <timezone>Europe/Berlin</timezone>
-        <rpm-excludedocs>true</rpm-excludedocs>
-        <rpm-check-signatures>false</rpm-check-signatures>
-        <bootsplash-theme>bgrt</bootsplash-theme>
-        <bootloader-theme>openSUSE</bootloader-theme>
+        <timezone>Asia/Singapore</timezone>
+        <hwclock>utc</hwclock>
+    
     </preferences>
     <preferences profiles="DracutLive">
         <type image="iso" primary="true" flags="dmsquash" firmware="efi" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="false"/>
