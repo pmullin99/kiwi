@@ -24,10 +24,6 @@
       kernelcmdline="splash"
       installiso="true"
       initrd_system="dracut">
-  <size unit="M">4096</size>
-  <oemconfig>
-      <oem-resize>true</oem-resize>
-  </oemconfig>
 </type>
 
     </preferences>
