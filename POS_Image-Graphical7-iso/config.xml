@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="POS_Image_JeOS7">
+<image schemaversion="6.1" name="POS_Image">
     <description type="system">
         <author>Admin User</author>
         <contact>noemail@example.com</contact>
-        <specification>SUSE Linux Enterprise 15 SP3 JeOS</specification>
+        <specification>SUSE Linux Enterprise 15 SP7</specification>
     </description>
     <preferences>
         <version>7.1.0</version>
@@ -14,7 +14,7 @@
 
         <locale>en_US</locale>
         <keytable>us</keytable>
-        <timezone>Europe/Berlin</timezone>
+        <timezone>Asia/Singapore</timezone>
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
