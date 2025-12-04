@@ -72,7 +72,7 @@
         -->
 
         <package name="kernel-default"/>
-        <!-- packages for saltboot and SUSE Manager -->
+        <!-- packages for SUSE Manager -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
 
