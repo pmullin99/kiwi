@@ -6,7 +6,14 @@
         <contact>admin@example.com</contact>
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
-    <preferences>
+     <profiles>
+        <profile name="DracutLive" description="Simple Live image" import="true"/>
+        <profile name="Live" description="Live image"/>
+        <profile name="Virtual" description="Simple Disk image"/>
+        <profile name="Disk" description="Expandable Disk image"/>
+    </profiles>
+    
+    <preferences profiles="Disk">
         <version>7.1.0</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
@@ -19,7 +26,7 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
         
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi">
+         <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi">
             <bootloader name="grub2"/>
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
