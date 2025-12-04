@@ -10,8 +10,9 @@
    <profiles>
          <profile name="Disk" description="Expandable Disk image"/>
     </profiles>
+
     <preferences>
-        <version>1.15.3</version>
+        <version>7.1.0</version>
         <packagemanager>zypper</packagemanager>
          <rpm-excludedocs>true</rpm-excludedocs>
         <rpm-check-signatures>false</rpm-check-signatures>
@@ -21,10 +22,7 @@
         <keytable>us</keytable>
         <timezone>Asia/Singapore</timezone>
         <hwclock>utc</hwclock>
-    </preferences>
-    
-        <preferences profiles="Disk">
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
+    </  <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
@@ -80,7 +78,7 @@
         <package name="kernel-default"/>
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
-	<package name="venv-salt-minion"/>
+	    <package name="venv-salt-minion"/>
 
 
         <package name="mdadm"/>
