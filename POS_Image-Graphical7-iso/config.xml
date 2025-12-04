@@ -27,7 +27,7 @@
       compressed="true">
   <size unit="M">8192</size>
   <oemconfig>
-      <oem-resize>True</oem-resize>
+      <oem-resize>true</oem-resize>
   </oemconfig>
 </type>
 
