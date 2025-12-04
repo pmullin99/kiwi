@@ -19,10 +19,10 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
         <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type filesystem="ext3" image="iso" initrd_system="dracut" compressed="true"></type>
+        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>
     </preferences>
 
- <users>
+    <users>
         <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
     </users>
 
