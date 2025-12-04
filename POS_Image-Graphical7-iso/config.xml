@@ -7,11 +7,8 @@
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
     
-    		<profiles>
-        <profile name="DracutLive" description="Simple Live image" import="true"/>
-        <profile name="Live" description="Live image"/>
-        <profile name="Virtual" description="Simple Disk image"/>
-        <profile name="Disk" description="Expandable Disk image"/>
+   <profiles>
+         <profile name="Disk" description="Expandable Disk image"/>
     </profiles>
     <preferences>
         <version>1.15.3</version>
@@ -25,28 +22,8 @@
         <timezone>Asia/Singapore</timezone>
         <hwclock>utc</hwclock>
     
-    </preferences>
-    <preferences profiles="DracutLive">
-        <type image="iso" primary="true" flags="dmsquash" firmware="efi" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="false"/>
-    </preferences>
-    <preferences profiles="Live">
-        <type image="iso" primary="true" flags="overlay" firmware="efi" kernelcmdline="splash" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="true"/>
-    </preferences>
-    <preferences profiles="Virtual">
-        <type image="oem" filesystem="ext4" kernelcmdline="splash" firmware="efi">
-            <oemconfig>
-                <oem-resize>false</oem-resize>
-            </oemconfig>
-          
-            <machine memory="512" guestOS="suse" HWversion="4">
-                <vmdisk id="0" controller="ide"/>
-                <vmnic driver="e1000" interface="0" mode="bridged"/>
-            </machine>
-        </type>
-    </preferences>
-    <preferences profiles="Disk">
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi">
-           
+        <preferences profiles="Disk">
+        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
@@ -55,11 +32,7 @@
             </oemconfig>
         </type>
     </preferences>
-
-    <users>
-        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
-    </users>
-
+    
     <packages type="image">
         <package name="patterns-base-minimal_base"/>
         <package name="aaa_base-extras"/> <!-- wouldn't be SUSE without that ;-) -->
