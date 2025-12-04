@@ -4,7 +4,7 @@
     <description type="system">
         <author>Admin User</author>
         <contact>noemail@example.com</contact>
-        <specification>SUSE Linux Enterprise 15 SP3 Graphical Image</specification>
+        <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
     <preferences>
         <version>7.1.0</version>
