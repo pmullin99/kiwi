@@ -23,7 +23,9 @@
       filesystem="ext4"
       kernelcmdline="splash"
       installiso="true"
+      firmware="efi"
       initrd_system="dracut">
+      
 </type>
 
     </preferences>
