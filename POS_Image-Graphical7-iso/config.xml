@@ -25,7 +25,6 @@
       installiso="true"
       initrd_system="dracut" 
       compressed="true">
-  <bootloader name="grub2" timeout="1"/>
   <size unit="M">8192</size>
   <oemconfig>
       <oem-resize>True</oem-resize>
