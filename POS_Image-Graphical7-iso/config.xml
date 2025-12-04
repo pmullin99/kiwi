@@ -20,15 +20,13 @@
         <rpm-excludedocs>true</rpm-excludedocs>
         <!-- add luks="password" attribute below in order to generate encrypted image -->
         <type image="oem"
-            filesystem="ext4"
-            kernelcmdline="splash"
-            devicepersistency="by-uuid"
-            bootpartition="true"
-            bootpartsize="1024">
+         filesystem="ext4"
+         kernelcmdline="splash"
+         installiso="true"
         <bootloader name="grub2" timeout="1"/>
         <size unit="M">8192</size>
         <oemconfig>
-            <oem-resize>false</oem-resize>
+          <oem-resize>false</oem-resize>
         </oemconfig>
        </type>
     </preferences>
