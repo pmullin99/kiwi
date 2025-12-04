@@ -7,9 +7,6 @@
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
      <profiles>
-        <profile name="DracutLive" description="Simple Live image" import="true"/>
-        <profile name="Live" description="Live image"/>
-        <profile name="Virtual" description="Simple Disk image"/>
         <profile name="Disk" description="Expandable Disk image"/>
     </profiles>
     
@@ -34,8 +31,7 @@
                 <oem-multipath-scan>false</oem-multipath-scan>
             </oemconfig>
         </type>
-    
-    
+      
     </preferences>
 
     <packages type="image">
