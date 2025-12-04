@@ -7,10 +7,6 @@
         <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
     </description>
     
-   <profiles>
-         <profile name="Disk" description="Expandable Disk image"/>
-    </profiles>
-
     <preferences>
         <version>7.1.0</version>
         <packagemanager>zypper</packagemanager>
@@ -22,7 +18,7 @@
         <keytable>us</keytable>
         <timezone>Asia/Singapore</timezone>
         <hwclock>utc</hwclock>
-    </  <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
+        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
