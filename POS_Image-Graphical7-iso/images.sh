@@ -40,4 +40,4 @@ test -f /.profile && . /.profile
 #fi
 
 # install bootloader and generate boot menu
-systemctl enable install-local-bootloader.service
+# systemctl enable install-local-bootloader.service
