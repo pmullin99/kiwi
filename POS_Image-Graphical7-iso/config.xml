@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="7.6" name="Leap-15.3_appliance">
+<image schemaversion="6.1" name="POS">
     <description type="system">
         <author>Marcus Schaefer</author>
         <contact>ms@suse.de</contact>
