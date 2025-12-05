@@ -21,7 +21,7 @@
         
         <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" format="vmdk" kernelcmdline="splash" firmware="efi"> 
             <oemconfig>
-                <oem-systemsize>2048</oem-systemsize>
+                <oem-systemsize>all</oem-systemsize>
                 <oem-swap>true</oem-swap>
                 <oem-device-filter>/dev/ram</oem-device-filter>
                 <oem-multipath-scan>false</oem-multipath-scan>
@@ -29,33 +29,51 @@
         </type>
 
     </preferences>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Module-Python3/15-SP7/x86_64/product//"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Module-Server-Applications/15-SP7/x86_64/product/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Module-Systems-Management/15-SP7/x86_64/product/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Product-SLES/15-SP7/x86_64/product/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Python3/15-SP7/x86_64/update/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Server-Applications/15-SP7/x86_64/update//"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Systems-Management/15-SP7/x86_64/update/"/>
-        </repository>
-        <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Updates/SLE-Product-SLES/15-SP7/x86_64/update/"/>
-        </repository>
+
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Python3/15-SP7/x86_64/product//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Server-Applications/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Systems-Management/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Product-SLES/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Python3/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Server-Applications/15-SP7/x86_64/update//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Systems-Management/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Product-SLES/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Desktop-Applications/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Desktop-Applications/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Development-Tools/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Development-Tools/15-SP7/x86_64/update//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/custom/"/>
+    </repository>
+    
+
 
     <packages type="image">
         <package name="patterns-base-minimal_base"/>
@@ -102,7 +120,7 @@
         <package name="kernel-default"/>
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
-	<package name="venv-salt-minion"/>
+	    <package name="venv-salt-minion"/>
 
 
         <package name="mdadm"/>
@@ -166,6 +184,7 @@
         <package name="ghostscript-fonts-other"/>
 
     </packages>
+   
     <packages type="bootstrap">
         <package name="udev"/>
         <package name="filesystem"/>
