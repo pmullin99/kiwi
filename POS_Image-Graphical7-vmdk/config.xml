@@ -163,6 +163,7 @@
         <package name="pulseaudio"/>
         <package name="MozillaFirefox"/>
         <package name="nautilus"/>
+        <package name="mozilla-nss"/>
 
         <!-- Themes and branding -->
         <package name="gnome-menus-branding-SLE"/>
