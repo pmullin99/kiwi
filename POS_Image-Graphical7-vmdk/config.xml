@@ -30,9 +30,6 @@
 
     </preferences>
         <repository type="rpm-md">
-        <source path="http://rmt/repo/SUSE/Products/SLE-Product-SLES/15-SP7/x86_64/product/x86_64/"/>
-        </repository>
-        <repository type="rpm-md">
         <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
         </repository>
         <repository type="rpm-md">
