@@ -28,15 +28,11 @@
             </oemconfig>
         </type>
 
-    <repository type="rpm-md">
-        <source path="https://download.opensuse.org/update/leap/15.6/sle"/>
-    </repository>
+    </preferences>
 
-        <repository type="rpm-md">
+       <repository type="rpm-md">
         <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
         </repository>
-
-    </preferences>
 
     <packages type="image">
         <package name="patterns-base-minimal_base"/>
