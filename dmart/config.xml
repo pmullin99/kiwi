@@ -19,7 +19,7 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type image="oem" filesystem="ext4" initrd_system="dracut" kernelcmdline="splash" firmware="efi">
+        <type image="oem" filesystem="ext4" installiso="true" initrd_system="dracut" kernelcmdline="splash" firmware="efi">
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
