@@ -31,7 +31,7 @@
     <user password="$6$Uhyiri..E1b5qGfx$lShE1IzIPuqHafz8QA1gzCEYKGYWSvBWKHiHp5a64NdB5Eo/aVykAhGGqPLCnBCkpZFJ5Bhv.T3572.xnuU33." name="root" home="/root" shell="/bin/bash" groups="root"/>
   </users>
 
-  <packages type='image' patternType='onlyRequired'>
+  <packages type="image">
     <package name='bootsplash'/>
     <package name='kernel-default'/>
     <package name='release-notes-sles'/>
