@@ -119,7 +119,7 @@
         <package name="kernel-default"/>
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
-	    <package name="venv-salt-minion"/>
+	    <!--package name="venv-salt-minion"/ -->
 
 
         <package name="mdadm"/>

@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<image schemaversion="7.4" name='SLES_15_SP7_JeOS' displayname='SLES_15_SP7_JeOS'>
+  <description type='system'>
+    <author>Berthold Gunreben</author>
+    <contact>studio-devel@suse.de</contact>
+    <specification>Minimal SLES 15 SP7</specification>
+  </description>
+  <preferences>
+     <type image='oem'
+        kernelcmdline='console=tty0 console=ttyS0,115200 elevator=noop rd.debug'
+        filesystem="ext4"
+        initrd_system="dracut">
+      <bootloader name="grub2" console="console serial"/>
+      <oemconfig>
+        <oem-swap>true</oem-swap>
+        <oem-swapsize>256</oem-swapsize>
+        <oem-boot-title>SLES 15 SP7</oem-boot-title>
+        <oem-skip-verify>true</oem-skip-verify>
+      </oemconfig>
+    </type>
+    <version>2.0.0</version>
+    <packagemanager>zypper</packagemanager>
+    <rpm-check-signatures>false</rpm-check-signatures>
+    <timezone>UTC</timezone>
+  </preferences>
+  <users>
+    <user password="$6$Ux.K2v/EN.U1TYJt$1PVXk5TkrMFsbDo1dnCSstOHv0losWoAuTvChvMn6UItAmiFCZk8uIZr5QmfhWnRHjx9u437iMQqO4Im70/zN/" name="root" home="/root" shell="/bin/bash" groups="root"/>
+  </users>
+
+  <packages type='image' patternType='onlyRequired'>
+    <package name='bootsplash'/>
+    <package name='kernel-default'/>
+    <package name='release-notes-sles'/>
+    <package name='timezone'/>
+    <package name='tar'/>
+    <package name='vim'/>
+    <package name='vim-base'/>
+    <package name='openssh'/>
+    <package name='cracklib-dict-full'/>
+    <package name='elfutils'/>
+    <package name='klogd'/>
+    <package name='ncurses-utils'/>
+    <package name='w3m'/>
+    <package name='iputils'/>
+    <package name='nfs-client'/>
+    <package name='rpcbind'/>
+    <package name='rsyslog'/>
+    <package name='suse-build-key'/>
+    <package name='irqbalance'/>
+    <package name='initviocons'/>
+    <package name='wicked'/>
+    <package name='kmod'/>
+    <package name='dracut'/>
+    <package name='kbd'/>
+    <package name='zypper'/>
+    <package name='procps'/>
+    <package name='sysconfig'/>
+    <package name='pwdutils'/>
+    <package name='login'/>
+    <package name='pam-modules'/>
+    <package name='pam'/>
+    <package name='insserv'/>
+    <package name='rpm'/>
+    <package name='mdadm'/>
+    <package name='glibc'/>
+    <package name='filesystem'/>
+    <package name='device-mapper'/>
+    <package name='coreutils'/>
+    <package name='bash'/>
+    <package name='aaa_base'/>
+    <package name='sles-release'/>
+    <package name='syslinux'/>
+    <package name='xfsprogs'/>
+    <package name='btrfsprogs'/>
+    <package name='tftp'/>
+    <package name='busybox'/>
+    <package name='dosfstools'/>
+    <archive name='bootsplash.tar' bootinclude='true'/>
+    <package name="e2fsprogs" bootinclude="true"/>
+    <package name="aaa_base-extras"/>
+    <package name="grub2"/>
+    <package name="pkg-config"/>
+    <package name="acl"/>
+    <package name="sg3_utils"/>
+    <package name="fipscheck"/>
+    <package name="libfipscheck1"/>
+    <package name="iproute2"/>
+    <package name="net-tools"/>
+    <package name="lsof"/>
+    <package name="which"/>
+  </packages>
+  <packages type='bootstrap'>
+    <package name='dracut-kiwi-oem-repart'/>
+     <package name="dracut-kiwi-oem-dump"/>
+
+    <package name='filesystem'/>
+    <package name='glibc-locale'/>
+    <package name='kmod'/>
+  </packages>
+</image>
