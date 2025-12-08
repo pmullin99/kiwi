@@ -8,18 +8,15 @@
   
   <preferences>
   
-     <type image='oem'
-        kernelcmdline='console=tty0 console=ttyS0,115200 elevator=noop rd.debug'
-        filesystem="ext4"
-        initrd_system="dracut">
-     
-      <oemconfig>
-        <oem-swap>true</oem-swap>
-        <oem-swapsize>256</oem-swapsize>
-        <oem-boot-title>SLES 15 SP7</oem-boot-title>
-        <oem-skip-verify>true</oem-skip-verify>
-      </oemconfig>
-    </type>
+     <type image="oem" filesystem="ext4" initrd_system="dracut" format="vmdk" kernelcmdline="splash" firmware="efi"> 
+            <oemconfig>
+                <oem-systemsize>2048</oem-systemsize>
+                <oem-swap>true</oem-swap>
+                <oem-device-filter>/dev/ram</oem-device-filter>
+                <oem-multipath-scan>false</oem-multipath-scan>
+            </oemconfig>
+        </type>
+
   
     <version>2.0.0</version>
     <packagemanager>zypper</packagemanager>
