@@ -20,7 +20,7 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
         <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type image="oem" filesystem="ext4" initrd_system="dracut" installiso="true" kernelcmdline="splash" firmware="efi"> 
+        <type image="oem" filesystem="ext4" initrd_system="dracut"  kernelcmdline="splash" firmware="efi"> 
             <oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
@@ -31,7 +31,7 @@
     </preferences>
 
     <users>
-        <user password="$1$wYJUgpM5$RXMMeASDc035eX.NbYWFl0" home="/root" name="root" groups="root"/>
+        <user password="$6$D4qx/cGOoxgvsI4x$/UqkQqQGGviyxOZ4pzKA34oW9TvRTudHzI5V1L3O3jJv6k2t1EGZ4cBNHwnwDQsvAWo2Nr.cLlHxZnacQ.m4/0" home="/root" name="root" groups="root"/>
     </users>
 
     <packages type="image">

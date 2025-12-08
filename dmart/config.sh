@@ -123,6 +123,7 @@ if [ -f /etc/chrony.conf ]; then
 fi
 
 # only for debugging
-systemctl enable debug-shell.service
+#systemctl enable debug-shell.service
 
 exit 0
+
