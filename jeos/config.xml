@@ -1,5 +1,5 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<image schemaversion="7.4" name='15sp7-jeos' displayname='15sp7-jeos'>
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="6.1" name='15sp7-jeos' displayname='15sp7-jeos'>
   <description type="system">
     <author>admin</author>
     <contact>admin@example.com</contact>
