@@ -1,11 +1,13 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<image schemaversion="7.4" name='SLES_15_SP7_JeOS' displayname='SLES_15_SP7_JeOS'>
+<image schemaversion="7.4" name='15sp7-jeos' displayname='15sp7-jeos'>
   <description type='system'>
-    <author>Berthold Gunreben</author>
-    <contact>studio-devel@suse.de</contact>
+    <author>admin</author>
+    <contact>admin@example.com</contact>
     <specification>Minimal SLES 15 SP7</specification>
   </description>
+  
   <preferences>
+  
      <type image='oem'
         kernelcmdline='console=tty0 console=ttyS0,115200 elevator=noop rd.debug'
         filesystem="ext4"
@@ -18,13 +20,15 @@
         <oem-skip-verify>true</oem-skip-verify>
       </oemconfig>
     </type>
+  
     <version>2.0.0</version>
     <packagemanager>zypper</packagemanager>
     <rpm-check-signatures>false</rpm-check-signatures>
     <timezone>UTC</timezone>
   </preferences>
+  
   <users>
-    <user password="$6$Ux.K2v/EN.U1TYJt$1PVXk5TkrMFsbDo1dnCSstOHv0losWoAuTvChvMn6UItAmiFCZk8uIZr5QmfhWnRHjx9u437iMQqO4Im70/zN/" name="root" home="/root" shell="/bin/bash" groups="root"/>
+    <user password="$6$Uhyiri..E1b5qGfx$lShE1IzIPuqHafz8QA1gzCEYKGYWSvBWKHiHp5a64NdB5Eo/aVykAhGGqPLCnBCkpZFJ5Bhv.T3572.xnuU33." name="root" home="/root" shell="/bin/bash" groups="root"/>
   </users>
 
   <packages type='image' patternType='onlyRequired'>
