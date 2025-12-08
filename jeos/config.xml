@@ -75,7 +75,7 @@
     <package name='tftp'/>
     <package name='busybox'/>
     <package name='dosfstools'/>
-    <archive name='bootsplash.tar' bootinclude='true'/>
+    <!-- archive name='bootsplash.tar' bootinclude='true'/ -->
     <package name="e2fsprogs" bootinclude="true"/>
     <package name="aaa_base-extras"/>
     <package name="grub2"/>
