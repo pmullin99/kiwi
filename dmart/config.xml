@@ -19,14 +19,14 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type image="iso" filesystem="ext4" initrd_system="dracut" kernelcmdline="splash" firmware="efi"> 
-            <oemconfig>
+        <!-- type image="oem" filesystem="ext4" initrd_system="dracut" kernelcmdline="splash" firmware="efi" -->
+        <type image="iso" primary="true" flags="dmsquash" firmware="efi" hybridpersistent_filesystem="ext4" hybridpersistent="true" mediacheck="false"/>
+            <!-- oemconfig>
                 <oem-systemsize>2048</oem-systemsize>
                 <oem-swap>true</oem-swap>
                 <oem-device-filter>/dev/ram</oem-device-filter>
                 <oem-multipath-scan>false</oem-multipath-scan>
-            </oemconfig>
+            </oemconfig -->
         </type>
     </preferences>
 
