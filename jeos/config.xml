@@ -12,7 +12,7 @@
         kernelcmdline='console=tty0 console=ttyS0,115200 elevator=noop rd.debug'
         filesystem="ext4"
         initrd_system="dracut">
-      <bootloader name="grub2" console="console serial"/>
+     
       <oemconfig>
         <oem-swap>true</oem-swap>
         <oem-swapsize>256</oem-swapsize>
