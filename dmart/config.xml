@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="POS_Image_Graphical7">
+<image schemaversion="6.1" name="dmart_pos_graphical">
     <description type="system">
         <author>Admin User</author>
         <contact>admin@example.com</contact>
@@ -8,7 +8,7 @@
     </description>
    
     <preferences>
-        <version>7.1.0</version>
+        <version>1.0.0</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
