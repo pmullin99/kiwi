@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <image schemaversion="7.4" name='15sp7-jeos' displayname='15sp7-jeos'>
-  <description type='system'>
+  <description type="system">
     <author>admin</author>
     <contact>admin@example.com</contact>
     <specification>Minimal SLES 15 SP7</specification>
