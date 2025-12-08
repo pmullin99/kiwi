@@ -38,7 +38,6 @@
     <package name='openssh'/>
     <package name='cracklib-dict-full'/>
     <package name='elfutils'/>
-    <package name='klogd'/>
     <package name='ncurses-utils'/>
     <package name='w3m'/>
     <package name='iputils'/>
@@ -57,7 +56,6 @@
     <package name='sysconfig'/>
     <package name='pwdutils'/>
     <package name='login'/>
-    <package name='pam-modules'/>
     <package name='pam'/>
     <package name='insserv'/>
     <package name='rpm'/>
