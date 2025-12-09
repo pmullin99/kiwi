@@ -122,6 +122,12 @@ if [ -f /etc/chrony.conf ]; then
     systemctl enable chronyd.service
 fi
 
+#======================================
+# Enable services
+#--------------------------------------
+systemctl enable sshd
+systemctl enable xrdp
+
 # only for debugging
 #systemctl enable debug-shell.service
 
