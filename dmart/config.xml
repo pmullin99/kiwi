@@ -8,7 +8,7 @@
     </description>
    
     <preferences>
-        <version>1.0.0</version>
+        <version>1.0.1</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
@@ -65,18 +65,10 @@
         <package name="iproute2"/> 
         <package name="openssh"/>
         <package name="rsync"/>
-         <package name="xrdp"/>
-         
-        <!-- Only for btrfs
-        <package name="btrfsprogs"/>
-        <package name="btrfsmaintenance"/>
-        <package name="grub2-snapper-plugin"/>
-        <package name="snapper-zypp-plugin"/>
-        <package name="rollback-helper"/>
-        <package name="snapper"/>
-        -->
-
+        <package name="xrdp"/>
+        <package name="xterm"/>
         <package name="kernel-default"/>
+    
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
