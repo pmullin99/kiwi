@@ -91,11 +91,14 @@ echo '** Update sysconfig entries...'
 
 baseUpdateSysConfig /etc/sysconfig/network/dhcp DHCLIENT_SET_HOSTNAME yes
 
+# Enable firewalld if installed
+if [ -x /usr/sbin/firewalld ]; then
+    systemctl enable firewalld
+fi
+
 # Set GRUB2 to boot graphically (bsc#1097428)
 sed -Ei"" "s/#?GRUB_TERMINAL=.+$/GRUB_TERMINAL=gfxterm/g" /etc/default/grub
 sed -Ei"" "s/#?GRUB_GFXMODE=.+$/GRUB_GFXMODE=auto/g" /etc/default/grub
-## Adjust Grub timeout
-sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/g' /etc/default/grub
 
 # On x86 UEFI machines use linuxefi entries
 if [[ "$(uname -m)" =~ i.86|x86_64 ]];then
@@ -123,3 +126,4 @@ fi
 #systemctl enable debug-shell.service
 
 exit 0
+
