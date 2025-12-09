@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="dmart_pos_graphical">
+<image schemaversion="6.1" name="dmart-live">
     <description type="system">
         <author>Admin User</author>
         <contact>admin@example.com</contact>
@@ -60,24 +60,13 @@
         <package name="rsync"/>
         <package name="xrdp"/>
         <package name="dracut-kiwi-live"/>
-         
-        <!-- Only for btrfs
-        <package name="btrfsprogs"/>
-        <package name="btrfsmaintenance"/>
-        <package name="grub2-snapper-plugin"/>
-        <package name="snapper-zypp-plugin"/>
-        <package name="rollback-helper"/>
-        <package name="snapper"/>
-        -->
-
+        <package name="xterm"/>
+    
         <package name="kernel-default"/>
-        <!-- packages for saltboot and SUSE Manager -->
+        <!-- packages for salt and SUSE Manager -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
-        <package name="dracut-kiwi-oem-repart"/>
-        <package name="dracut-kiwi-oem-dump"/>
-
-
+        
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
@@ -96,8 +85,6 @@
         <package name="fontconfig"/>
         <package name="fonts-config"/>
         <package name="noto-sans-fonts"/>
-        <package name="xfsprogs"/>              <!-- can be optionaly removed if XFS will not be used -->
-        <package name="busybox"/>               <!-- this is needed if tftp is used for background image downloading -->
         <package name="bind-utils"/>
         <package name="kiwi-tools"/>
         <package name="dosfstools"/>
