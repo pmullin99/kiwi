@@ -6,6 +6,7 @@ rm /var/lib/zypp/AnonymousUniqueId
 dbus-uuidgen --ensure
 systemd-machine-id-setup
 
+echo "firstboot has completed" > /root/fb.txt
+systemctl status venv-salt-minion >> /root/fb.txt
 systemctl enable --now venv-salt-minion
 
-echo "firstboot has completed" > /root/fb.txt

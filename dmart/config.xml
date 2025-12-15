@@ -69,7 +69,8 @@
         <package name="xterm"/>
         <package name="kernel-default"/>
         <package name="yast2-firstboot"/>
-    
+        <package name="xrandr"/>
+        
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
