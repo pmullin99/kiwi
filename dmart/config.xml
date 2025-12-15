@@ -68,6 +68,7 @@
         <package name="xrdp"/>
         <package name="xterm"/>
         <package name="kernel-default"/>
+        <package name="yast2-firstboot"/>
     
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
