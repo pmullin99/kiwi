@@ -127,3 +127,13 @@ fi
 
 exit 0
 
+#======================================
+# Enable services
+#--------------------------------------
+systemctl enable sshd
+systemctl enable xrdp
+
+## Set permissions on firstboot script
+chmod +x /usr/share/firstboot/scripts/firstboot.sh
+## Set grub timeout to 1
+sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/g' /etc/default/grub

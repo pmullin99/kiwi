@@ -6,4 +6,4 @@ rm /var/lib/zypp/AnonymousUniqueId
 dbus-uuidgen --ensure
 systemd-machine-id-setup
 
-systemctl enable venv-salt-minion
+systemctl enable --now venv-salt-minion

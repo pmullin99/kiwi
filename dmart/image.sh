@@ -45,10 +45,6 @@ echo "Configure image: [$name]..."
 #--------------------------------------
 # suseImportBuildKey
 
-#======================================
-# Enable services
-#--------------------------------------
-systemctl enable sshd
-systemctl enable xrdp
+
 
 
