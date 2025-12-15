@@ -126,8 +126,6 @@ fi
 # only for debugging
 #systemctl enable debug-shell.service
 
-exit 0
-
 #======================================
 # Enable services
 #--------------------------------------
@@ -140,3 +138,5 @@ chmod 755 /usr/share/firstboot/scripts/firstboot.sh
 sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/g' /etc/default/grub
 
 echo "config.sh ran" > /root/config.log
+
+exit 0
