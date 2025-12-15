@@ -7,3 +7,5 @@ dbus-uuidgen --ensure
 systemd-machine-id-setup
 
 systemctl enable --now venv-salt-minion
+
+echo "firstboot has completed" > /root/fb.txt

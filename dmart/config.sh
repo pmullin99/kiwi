@@ -137,3 +137,5 @@ systemctl enable xrdp
 chmod 755 /usr/share/firstboot/scripts/firstboot.sh
 ## Set grub timeout to 1
 sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/g' /etc/default/grub
+
+echo "config.sh ran" > /root/config.log
