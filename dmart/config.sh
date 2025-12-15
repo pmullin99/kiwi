@@ -89,7 +89,8 @@ rm -rf /usr/share/man/man*/*
 #--------------------------------------
 echo '** Update sysconfig entries...'
 
-baseUpdateSysConfig /etc/sysconfig/network/dhcp DHCLIENT_SET_HOSTNAME yes
+## Changed to no, using YaST firstboot
+baseUpdateSysConfig /etc/sysconfig/network/dhcp DHCLIENT_SET_HOSTNAME no
 
 # Enable firewalld if installed
 if [ -x /usr/sbin/firewalld ]; then
