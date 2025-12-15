@@ -45,6 +45,7 @@ echo "Configure image: [$name]..."
 #--------------------------------------
 # suseImportBuildKey
 
-
+## Set permissions on firstboot script
+chmod 755 /usr/share/firstboot/scripts/firstboot.sh
 
 
