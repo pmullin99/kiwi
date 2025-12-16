@@ -76,7 +76,17 @@
 	    <package name="venv-salt-minion"/>
         <package name="dracut-kiwi-oem-repart"/>
         <package name="dracut-kiwi-oem-dump"/>
-
+        
+        <!-- packages for AD intigration -->
+        <package name="krb5-client"/>
+        <package name="openldap2-client"/>
+        <package name="sssd"/>
+        <package name="sssd-tools"/>
+        <package name="sssd-ad"/>
+        <package name="adcli"/>
+        <package name="sssd-ldap"/>
+        <package name="cyrus-sasl-gssapi"/>
+        <package name="krb5-plugin-preauth-pkinit"/>
 
         <package name="mdadm"/>
         <package name="kernel-firmware"/>

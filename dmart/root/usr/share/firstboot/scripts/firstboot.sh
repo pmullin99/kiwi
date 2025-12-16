@@ -104,8 +104,8 @@ echo "$NAMESERVER1     $AD_SERVER.$LC_DOMAIN $AD_SERVER" >> /etc/hosts
 ## install sssd and kerberos client 
 ## For kiwi add packages to config.xml and comment out 
 echo "Installing sssd packages and dependencies" | tee -a $LOG_FILE
-  zypper in -y krb5-client  openldap2-client sssd sssd-tools sssd-ad adcli sssd-ldap cyrus-sasl-gssapi krb5-plugin-preauth-pkinit  | tee -a $LOG_FILE
-  export LDB_MODULES_PATH="${LDB_MODULES_PATH}:/usr/lib64/samba/ldb"
+#  zypper in -y krb5-client  openldap2-client sssd sssd-tools sssd-ad adcli sssd-ldap cyrus-sasl-gssapi krb5-plugin-preauth-pkinit  | tee -a $LOG_FILE
+#  export LDB_MODULES_PATH="${LDB_MODULES_PATH}:/usr/lib64/samba/ldb"
 
 ## Configure openldap client
 cp /etc/openldap/ldap.conf /etc/openldap/ldap.conf.$TIME
