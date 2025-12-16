@@ -6,7 +6,9 @@ rm /var/lib/zypp/AnonymousUniqueId
 dbus-uuidgen --ensure
 systemd-machine-id-setup
 
-systemctl enable --now venv-salt-minion
+ip a s > /root/ip.txt
+
+
 
 #!/bin/bash
 #################################################################################################
@@ -483,5 +485,11 @@ sleep 2
 ## Cleanup host file entry if required
 sed -i /"$HOST"/d /etc/hosts
 sed -i /"$AD_SERVER"/d /etc/hosts
+
+
+
+
+systemctl enable --now venv-salt-minion
+
 
 exit 0
