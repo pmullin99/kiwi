@@ -484,4 +484,4 @@ sleep 2
 sed -i /"$HOST"/d /etc/hosts
 sed -i /"$AD_SERVER"/d /etc/hosts
 
-
+exit 0
