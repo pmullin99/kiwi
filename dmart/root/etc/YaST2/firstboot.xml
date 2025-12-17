@@ -54,6 +54,7 @@
             <modules  config:type="list">
                 <module>
                     <label>Network Autosetup</label>
+                    <enabled config:type="boolean">true</enabled>
                     <name>firstboot_setup_dhcp</name>
                 </module>
                 <module>

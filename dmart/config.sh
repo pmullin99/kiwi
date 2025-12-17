@@ -136,6 +136,6 @@ systemctl enable xrdp
 chmod 755 /usr/share/firstboot/scripts/firstboot.sh
 ## Set grub timeout to 1
 sed -i 's/^GRUB_TIMEOUT=.*/GRUB_TIMEOUT=1/g' /etc/default/grub
-/sbin/update-bootloader
+
 
 exit 0
