@@ -9,46 +9,6 @@ systemd-machine-id-setup
 ip a s > /root/ip.txt
 
 
-
-#!/bin/bash
-#################################################################################################
-# sssd-setup-auto.sh
-# Author:       Patrick Mullin, November 2023
-#               patrick.mullin@suse.com
-# note: <<< NO SUPPORT PROVIDED FOR THIS SCRIPT!!! >>> 
-# License:      GNU General Public License 2 (GPLv2)
-# Copyright (c) 2021 SUSE LLC.
-# Description:  Automate the configuration of sssd on SLES 12/15 to connect to Active Directory
-#################################################################################################
-
-## See TID 7018461 "Manually join AD on SUSE Linux Enterprise Server 12 or 15 without Yast usage" for more info
-
-## Version History
-# version 1 8-21-21 Inital build
-# version 2 11-18-21 :
-# - Added pam config test for broken symlinks
-# - Added logging
-# - Added openldap config
-# - added additional tests at the end
-# - added samba-dsdb-modules to fix error "/usr/lib/x86_64-linux-gnu/samba/ldb : No such file or directory"
-# - added ad_gpo_access_control
-# - addded additional comments
-# version 12-27-23 :
-# - updated network dns
-# - added ad server host entry for ldap tests
-# - replaced net ads join with adcli
-# - added addtional tests
-# - added kerberos path and permissions
-
-# Sample variables used in the configuration: 
-# UC_DOMAIN - Uppercase domain (ex. SUSE.SITE.COM)
-# LDAP_BASE the ldap search base for lookups
-# ADMIN_USER - AD user used to join domain (ex. admin)
-# PASSWORD - admin user password 
-# AD ACCESS_GROUP - access group, only members of this group can login to server
-# NAMESERVER1 - DNS server - should be AD domain controller
-# NAMESERVER2 - DNS server
-
 ##  Adjust variables to match AD environment:
 UC_DOMAIN=EXAMPLE.COM
 LDAP_BASE="dc=example,dc=com"
@@ -102,12 +62,6 @@ netconfig update -f
 sed -i /"$HOST"/d /etc/hosts
 echo "$IP     $HOST.$LC_DOMAIN $HOST" >> /etc/hosts
 echo "$NAMESERVER1     $AD_SERVER.$LC_DOMAIN $AD_SERVER" >> /etc/hosts
-
-## install sssd and kerberos client 
-## For kiwi add packages to config.xml and comment out 
-echo "Installing sssd packages and dependencies" | tee -a $LOG_FILE
-#  zypper in -y krb5-client  openldap2-client sssd sssd-tools sssd-ad adcli sssd-ldap cyrus-sasl-gssapi krb5-plugin-preauth-pkinit  | tee -a $LOG_FILE
-#  export LDB_MODULES_PATH="${LDB_MODULES_PATH}:/usr/lib64/samba/ldb"
 
 ## Configure openldap client
 cp /etc/openldap/ldap.conf /etc/openldap/ldap.conf.$TIME
@@ -486,10 +440,6 @@ sleep 2
 sed -i /"$HOST"/d /etc/hosts
 sed -i /"$AD_SERVER"/d /etc/hosts
 
-
-
-
 systemctl enable --now venv-salt-minion
-
 
 exit 0
