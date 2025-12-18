@@ -159,7 +159,7 @@
                 </module>
                 <module>
                     <label>Finish Setup</label>
-                    <enabled config:type="boolean">false</enabled>
+                    <enabled config:type="boolean">yes</enabled>
                     <name>firstboot_finish</name>
                     <enable_back>no</enable_back>
                     <enable_next>yes</enable_next>
