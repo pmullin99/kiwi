@@ -7,7 +7,7 @@ dbus-uuidgen --ensure
 systemd-machine-id-setup
 
 systemctl enable --now venv-salt-minion
-ip a s > /root/ip.txt
+
 
 
 ##  Adjust variables to match AD environment:
