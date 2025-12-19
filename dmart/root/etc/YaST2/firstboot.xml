@@ -2,6 +2,12 @@
 <productDefines  xmlns="http://www.suse.com/1.0/yast2ns"
     xmlns:config="http://www.suse.com/1.0/configns">
 
+    <!--
+    $Id$
+    Work around for the text domain
+    textdomain="firstboot"
+    -->
+
     <textdomain>firstboot</textdomain>
 
         <!---
@@ -39,8 +45,19 @@
         (/etc/YaST2/control.xml or root directory of installation media).
         -->
     </globals>
-    
-   
+
+    <!-- proposals config:type="list">
+        <proposal>
+            <name>firstboot_hardware</name>
+            <mode>installation</mode>
+            <stage>firstboot</stage>
+            <label>Hardware Configuration</label>
+            <proposal_modules config:type="list">
+                <proposal_module>printer</proposal_module>
+            </proposal_modules>
+        </proposal>
+    </proposals -->
+
     <workflows  config:type="list">
         <workflow>
             <defaults>
@@ -54,7 +71,7 @@
             <modules  config:type="list">
                 <module>
                     <label>Network Autosetup</label>
-                    <enabled config:type="boolean">true</enabled>
+                    <enabled config:type="boolean">false</enabled>
                     <name>firstboot_setup_dhcp</name>
                 </module>
                 <module>
@@ -159,7 +176,7 @@
                 </module>
                 <module>
                     <label>Finish Setup</label>
-                    <enabled config:type="boolean">true</enabled>
+                    <enabled config:type="boolean">false</enabled>
                     <name>firstboot_finish</name>
                     <enable_back>no</enable_back>
                     <enable_next>yes</enable_next>
