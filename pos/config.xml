@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="dmart_pos_graphical">
+<image schemaversion="6.1" name="pos_graphical">
     <description type="system">
         <author>Admin User</author>
         <contact>admin@example.com</contact>
@@ -71,7 +71,7 @@
         <package name="yast2-firstboot"/>
         <package name="xrandr"/>
         
-        <!-- packages for saltboot and SUSE Manager -->
+        <!-- packages for MLM and kiwi image build -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
         <package name="dracut-kiwi-oem-repart"/>
@@ -87,7 +87,10 @@
         <package name="sssd-ldap"/>
         <package name="cyrus-sasl-gssapi"/>
         <package name="krb5-plugin-preauth-pkinit"/>
-
+         
+        <!-- Added for VMware images -->
+        <package name="open-vm-tools"/>
+        
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
@@ -106,7 +109,7 @@
         <package name="fontconfig"/>
         <package name="fonts-config"/>
         <package name="noto-sans-fonts"/>
-        <package name="xfsprogs"/>              <!-- can be optionaly removed if XFS will not be used -->
+        <!-- package name="xfsprogs"/ -->              <!-- can be optionaly removed if XFS will not be used -->
         <package name="busybox"/>               <!-- this is needed if tftp is used for background image downloading -->
         <package name="bind-utils"/>
         <package name="kiwi-tools"/>
