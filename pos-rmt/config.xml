@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="7.5" name="pos-vmdk">
+<image schemaversion="7.5" name="pos-rmt">
     <description type="system">
         <author>Admin User</author>
         <contact>noemail@example.com</contact>
@@ -17,9 +17,8 @@
         <timezone>Asia/Singapore</timezone>
         <!-- hwclock>utc</hwclock -->
         <rpm-excludedocs>true</rpm-excludedocs>
-        
-        <type image="oem" filesystem="btrfs" kernelcmdline="console=ttyS0" firmware="efi" installpxe="true" bootpartition="false" installboot="install" volid="KATO_INSTALL"> 
-            <bootloader name="grub2" console="serial" timeout="10"/>
+        <type image="oem" filesystem="ext3" kernelcmdline="console=ttyS0" firmware="efi" installpxe="true" bootpartition="false" installboot="install" volid="KATO_INSTALL">             
+            <bootloader name="grub2" console="serial" timeout="1"/>
             <oemconfig>
                 <oem-unattended>true</oem-unattended>
                 <oem-swapsize>1024</oem-swapsize>
