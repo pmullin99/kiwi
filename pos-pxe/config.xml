@@ -164,7 +164,7 @@
         <package name="gdm"/>
         <package name="alsa"/>
         <package name="pulseaudio"/>
-        <package name="MozillaFirefox"/>
+        <!-- package name="MozillaFirefox"/ -->
         <package name="nautilus"/>
 
         <!-- Themes and branding -->
@@ -174,7 +174,7 @@
         <package name="gdm-branding-SLE"/>
         <package name="branding-SLE"/>
         <package name="gio-branding-SLE"/>
-        <package name="MozillaFirefox-branding-SLE"/>
+        <!-- package name="MozillaFirefox-branding-SLE"/ -->
         <package name="gnome-shell-classic"/>
 
         <!-- Fonts -->
