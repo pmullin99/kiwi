@@ -22,7 +22,49 @@
         </type>
   
     </preferences>
-
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Python3/15-SP7/x86_64/product//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Server-Applications/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Systems-Management/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Product-SLES/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Python3/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Server-Applications/15-SP7/x86_64/update//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Systems-Management/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Product-SLES/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Desktop-Applications/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Desktop-Applications/15-SP7/x86_64/update/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Development-Tools/15-SP7/x86_64/product/"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Development-Tools/15-SP7/x86_64/update//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/custom/"/>
+    </repository>
+    
     <users>
         <user password="$6$D4qx/cGOoxgvsI4x$/UqkQqQGGviyxOZ4pzKA34oW9TvRTudHzI5V1L3O3jJv6k2t1EGZ4cBNHwnwDQsvAWo2Nr.cLlHxZnacQ.m4/0" home="/root" name="root" groups="root"/>
     </users>
