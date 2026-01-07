@@ -18,7 +18,7 @@
         <!-- hwclock>utc</hwclock -->   
         <rpm-excludedocs>true</rpm-excludedocs>
        
-        <type image="oem" filesystem="ext4" kernelcmdline="console=ttyS0" firmware="efi" boot="netboot/suse-SLES15">
+        <type image="oem" filesystem="ext4" kernelcmdline="console=ttyS0" firmware="efi" boot="netboot/suse-SLES15" initrd_system="kiwi">
         </type>
   
     </preferences>
