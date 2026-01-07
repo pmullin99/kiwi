@@ -18,17 +18,13 @@
         <!-- hwclock>utc</hwclock -->   
         <rpm-excludedocs>true</rpm-excludedocs>
        
-        <type image="oem" filesystem="ext4" kernelcmdline="console=ttyS0" firmware="efi" installpxe="true" bootpartition="false" installboot="install" volid="KATO_INSTALL">
-            <bootloader name="grub2" console="serial" timeout="10"/>
-            <oemconfig>
+        <type image="oem" filesystem="ext3" installpxe="true">
+               <oemconfig>
                 <oem-unattended>true</oem-unattended>
                 <oem-swapsize>1024</oem-swapsize>
                 <oem-multipath-scan>false</oem-multipath-scan>
             </oemconfig>
-            <systemdisk>
-                <volume name="home"/>
-            </systemdisk>
-        </type>
+           </type>
   
     </preferences>
     <repository type="rpm-md">
@@ -69,6 +65,12 @@
     </repository>
     <repository type="rpm-md">
     <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Development-Tools/15-SP7/x86_64/update//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Legacy/15-SP7/x86_64/product//"/>
+    </repository>
+    <repository type="rpm-md">
+    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Legacy/15-SP7/x86_64/update/"/>
     </repository>
     <repository type="rpm-md">
     <source path="http://rmt/repo/custom/"/>
@@ -134,7 +136,7 @@
         <package name="krb5-plugin-preauth-pkinit"/>
          
         <!-- Added for VMware images -->
-        <!-- package name="open-vm-tools"/ -->
+        <package name="open-vm-tools"/>
         
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
