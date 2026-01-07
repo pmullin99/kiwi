@@ -18,7 +18,7 @@
         <!-- hwclock>utc</hwclock -->   
         <rpm-excludedocs>true</rpm-excludedocs>
        
-        <type image="pxe" filesystem="ext4" kernelcmdline="console=ttyS0" firmware="efi" boot="netboot/suse-SLES15" initrd_system="kiwi">
+        <type image="pxe" filesystem="ext4" kernelcmdline="console=ttyS0" firmware="efi" boot="netboot/suse-SLES15">
         </type>
   
     </preferences>
@@ -64,7 +64,7 @@
     <repository type="rpm-md">
     <source path="http://rmt/repo/custom/"/>
     </repository>
-    
+
     <users>
         <user password="$6$D4qx/cGOoxgvsI4x$/UqkQqQGGviyxOZ4pzKA34oW9TvRTudHzI5V1L3O3jJv6k2t1EGZ4cBNHwnwDQsvAWo2Nr.cLlHxZnacQ.m4/0" home="/root" name="root" groups="root"/>
     </users>
