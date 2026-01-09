@@ -2,8 +2,8 @@
 
 KIWI_DIR=/root/kiwi
 IMAGE_DESCRIPTION=pos-rmt
-BUILD_DIR=/root/build
-BACKUP_DIR=/var/kiwi_backup
+BUILD_DIR=/var/lib/Kiwi/build
+BACKUP_DIR=/var/lib/Kiwi/kiwi_backup
 IMAGE=pos-rmt.x86_64-7.1.1
 IMAGE_SERVER_IP=192.168.13.100
 
