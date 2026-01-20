@@ -16,8 +16,7 @@
         <timezone>Asia/Singapore</timezone>
         <!-- hwclock>utc</hwclock -->
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>             
-        </type>
+        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>               
     </preferences>
 
     <users>
