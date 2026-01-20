@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="7.5" name="pos_graphical">
+<image schemaversion="6.1" name="pos_graphical">
     <description type="system">
         <author>Admin User</author>
         <contact>admin@example.com</contact>
@@ -15,66 +15,20 @@
         <locale>en_US</locale>
         <keytable>us</keytable>
         <timezone>Asia/Singapore</timezone>
-        <!-- hwclock>utc</hwclock -->   
+        <hwclock>utc</hwclock>   
         <rpm-excludedocs>true</rpm-excludedocs>
-       
-        <type image="oem" filesystem="ext3" installpxe="true">
-               <oemconfig>
-                <oem-unattended>true</oem-unattended>
-                <oem-swapsize>1024</oem-swapsize>
+
+        <type image="oem" filesystem="ext4" installiso="true" initrd_system="dracut" kernelcmdline="splash" firmware="efi">
+        <!-- type image="pxe" filesystem="ext3" boot="netboot/suse-SLES15" -->
+            <oemconfig>
+                <!-- oem-systemsize>2048</oem-systemsize -->
+                <oem-swap>true</oem-swap>
+                <oem-device-filter>/dev/ram</oem-device-filter>
                 <oem-multipath-scan>false</oem-multipath-scan>
             </oemconfig>
-           </type>
+        </type>
   
     </preferences>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Basesystem/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Python3/15-SP7/x86_64/product//"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Server-Applications/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Systems-Management/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Product-SLES/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Python3/15-SP7/x86_64/update/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Server-Applications/15-SP7/x86_64/update//"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Systems-Management/15-SP7/x86_64/update/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Product-SLES/15-SP7/x86_64/update/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Desktop-Applications/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Desktop-Applications/15-SP7/x86_64/update/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Development-Tools/15-SP7/x86_64/product/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Development-Tools/15-SP7/x86_64/update//"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Products/SLE-Module-Legacy/15-SP7/x86_64/product//"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/SUSE/Updates/SLE-Module-Legacy/15-SP7/x86_64/update/"/>
-    </repository>
-    <repository type="rpm-md">
-    <source path="http://rmt/repo/custom/"/>
-    </repository>
 
     <users>
         <user password="$6$D4qx/cGOoxgvsI4x$/UqkQqQGGviyxOZ4pzKA34oW9TvRTudHzI5V1L3O3jJv6k2t1EGZ4cBNHwnwDQsvAWo2Nr.cLlHxZnacQ.m4/0" home="/root" name="root" groups="root"/>
@@ -175,7 +129,7 @@
         <package name="gdm"/>
         <package name="alsa"/>
         <package name="pulseaudio"/>
-        <!-- package name="MozillaFirefox"/ -->
+        <package name="MozillaFirefox"/>
         <package name="nautilus"/>
 
         <!-- Themes and branding -->
@@ -185,7 +139,7 @@
         <package name="gdm-branding-SLE"/>
         <package name="branding-SLE"/>
         <package name="gio-branding-SLE"/>
-        <!-- package name="MozillaFirefox-branding-SLE"/ -->
+        <package name="MozillaFirefox-branding-SLE"/>
         <package name="gnome-shell-classic"/>
 
         <!-- Fonts -->
