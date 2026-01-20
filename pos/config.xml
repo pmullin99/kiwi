@@ -65,6 +65,7 @@
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
         <package name="mdadm"/>
+        <package name="dracut-saltboot"/>
         
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
