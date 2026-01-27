@@ -65,10 +65,13 @@
         -->
 
         <package name="kernel-default"/>
+        <package name="yast2-firstboot"/>
+        <package name="xrandr"/>
+
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
-	<package name="venv-salt-minion"/>
-	<package name="dracut-saltboot"/>
+	    <package name="venv-salt-minion"/>
+	    <package name="dracut-saltboot"/>
 
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
@@ -109,6 +112,7 @@
         <package name="pulseaudio"/>
         <package name="MozillaFirefox"/>
         <package name="nautilus"/>
+        <package name="xrdp"/>
 
         <!-- Themes and branding -->
         <package name="gnome-menus-branding-SLE"/>

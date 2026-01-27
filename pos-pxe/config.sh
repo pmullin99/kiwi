@@ -112,6 +112,12 @@ if [ ! -s /var/log/zypper.log ]; then
 	> /var/log/zypper.log
 fi
 
+#======================================
+# Enable services
+#--------------------------------------
+systemctl enable sshd
+systemctl enable xrdp
+
 #=====================================
 # Enable chrony if installed
 #-------------------------------------
