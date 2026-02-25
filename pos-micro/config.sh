@@ -47,7 +47,7 @@ echo ** "reset machine settings"
 sed -i 's/^root:[^:]*:/root:*:/' /etc/shadow
 rm /etc/machine-id
 rm /var/lib/zypp/AnonymousUniqueId
-rm /var/lib/systemd/random-seed
+
 
 #======================================
 # Setup baseproduct link
