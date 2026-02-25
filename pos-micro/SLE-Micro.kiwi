@@ -10,7 +10,7 @@
    
 
     <preferences>
-        <version>6.1.1</version>
+        <version>6.1.2</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
