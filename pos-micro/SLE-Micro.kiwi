@@ -55,7 +55,7 @@
     <package name="patterns-microos-selinux"/>
 	<package name="podman"/>
 	<package name="suseconnect-ng"/>
-	<package name="SLE-Micro-release"/>
+	<package name="SL-Micro-release"/>
 	<package name="grub2-branding-SLE" arch="x86_64,aarch64"/>
 	<package name="systemd-presets-branding-SMO"/>
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
