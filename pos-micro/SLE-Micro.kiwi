@@ -16,28 +16,7 @@
         <bootloader-theme>SLE</bootloader-theme>
         <rpm-excludedocs>true</rpm-excludedocs>
         <locale>en_US</locale>
-        <type 
-            image="pxe"
-	        initrd_system="dracut"
-            filesystem="btrfs"
-            bootloader_console="gfxterm"
-	        boottimeout="1"
-            firmware="uefi"
-            kernelcmdline="console=ttyS0,115200 console=tty0 security=selinux selinux=1 quiet net.ifnames=0"
-            bootkernel="custom"
-            devicepersistency="by-uuid"
-            compressed="true"
-        > 
-            <systemdisk>
-                <volume name="home"/>
-                <volume name="root"/>
-	            <volume name="boot/grub2/i386-pc"/>
-                <volume name="boot/grub2/x86_64-efi" mountpoint="boot/grub2/x86_64-efi"/>
-                <volume name="boot/writable"/>
-	         	<volume name="usr/local"/>
-		        <volume name="var" copy_on_write="false"/>
-            </systemdisk>
-        </type>
+        <type filesystem="btrfs" image="pxe" initrd_system="dracut" compressed="true"></type>
     </preferences>
 
     <users>
