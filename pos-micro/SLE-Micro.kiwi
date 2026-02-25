@@ -86,7 +86,6 @@
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
     <package name="ignition"/>
-    <package name="ignition-dracut-grub2"/>
 	<package name="combustion"/>
 	<package name="jeos-firstboot"/>
 	<package name="growpart-generator"/>
