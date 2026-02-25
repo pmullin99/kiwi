@@ -52,7 +52,13 @@
     </users>
 
     <packages type="image">
-    <package name="patterns-microos-selinux"/>
+    <package name="patterns-base-base"/>
+    <package name="patterns-base-bootloader"/>
+    <package name="patterns-base-cockpit"/>
+    <package name="patterns-base-hardware "/>
+    <package name="patterns-base-salt_minion"/>
+    <package name="patterns-base-transactional"/>
+    <package name="patterns-micro-defaults "/>
 	<package name="podman"/>
 	<package name="suseconnect-ng"/>
 	<package name="SL-Micro-release"/>
@@ -61,8 +67,7 @@
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
 	<package name="wpa_supplicant" arch="x86_64,aarch64"/>
-
-        <!-- include directly to avoid cockpit-machines (bsc#1196971)  -->
+    <!-- include directly to avoid cockpit-machines (bsc#1196971)  -->
 	<package name="cockpit-system"/>
 	<package name="libpwquality-tools"/> <!-- dependency of cockpit-system not handled by kiwi properly -->
 	<package name="cockpit-ws"/>
@@ -74,55 +79,38 @@
 	<package name="libudisks2-0_lvm2"/>
 	<package name="libudisks2-0_btrfs"/>
 	<package name="cockpit-selinux"/>
-    </packages>
-
-    
-    <packages type="image">
-        <namedCollection name="basesystem"/>
-        <package name="patterns-microos-basesystem"/>
-        <namedCollection name="microos-hardware"/>
-        <package name="patterns-microos-hardware"/>
-        <namedCollection name="microos-fips"/>
-        <package name="patterns-microos-fips"/>
-        <package name="grub2"/>
-        <package name="glibc-locale-base"/>
-        <package name="ca-certificates"/>
+    <package name="grub2"/>
+    <package name="glibc-locale-base"/>
+    <package name="ca-certificates"/>
 	<package name="SLE-Micro-release"/>
 	<package name="systemd-presets-branding-SMO"/>
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
-        <package name="ignition"/>
-        <package name="ignition-dracut-grub2"/>
+    <package name="ignition"/>
+    <package name="ignition-dracut-grub2"/>
 	<package name="combustion"/>
 	<package name="jeos-firstboot"/>
 	<package name="growpart-generator"/>
 	<package name="suse-build-key"/>
-	<!-- for debugging -->
 	<package name="less"/>
 	<package name="vim-small"/>
-
-        <namedCollection name="microos-defaults"/>
-        <package name="patterns-microos-defaults"/>
-	<package name="NetworkManager"/>
+  	<package name="NetworkManager"/>
 	<package name="NetworkManager-branding-SLE"/>
 	<package name="ModemManager"/>
+    <package name="grub2-i386-pc" arch="x86_64"/>
+    <package name="grub2-x86_64-efi" arch="x86_64"/>
+    <package name="grub2-branding-SLE" bootinclude="true" arch="x86_64,aarch64"/>
+    <package name="grub2-snapper-plugin"/>
+    <package name="shim" arch="x86_64,aarch64"/>
+    <package name="mokutil" arch="x86_64,aarch64"/>
+    <package name="dracut-kiwi-oem-repart"/>
+     <package name="dracut-kiwi-oem-dump"/>
+      <!-- kernel-default-base does not have all required drivers -->
+     <package name="kernel-default"/>
+   </packages>
+    
+    <packages type="bootstrap">
+      <package name="filesystem"/>
     </packages>
 
-    <packages type="image" profiles="bootloader">
-      <package name="grub2-i386-pc" arch="x86_64"/>
-      <package name="grub2-x86_64-efi" arch="x86_64"/>
-      <package name="grub2-branding-SLE" bootinclude="true" arch="x86_64,aarch64"/>
-      <package name="grub2-snapper-plugin"/>
-      <package name="shim" arch="x86_64,aarch64"/>
-      <package name="mokutil" arch="x86_64,aarch64"/>
-    </packages>
-      <package name="dracut-kiwi-oem-repart"/>
-      <package name="dracut-kiwi-oem-dump"/>
-    </packages>
-    <!-- kernel-default-base does not have all required drivers -->
-        <package name="kernel-default"/>
-    </packages>
-    <packages type="bootstrap">
-        <package name="filesystem"/>
-    </packages>
 </image>
