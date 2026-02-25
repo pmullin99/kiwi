@@ -16,13 +16,16 @@
         <bootloader-theme>SLE</bootloader-theme>
         <rpm-excludedocs>true</rpm-excludedocs>
         <locale>en_US</locale>
+        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>
+        
+
         <type
-            image="oem"
-	    initrd_system="dracut"
+            image="pxe"
+	        initrd_system="dracut"
             filesystem="btrfs"
             bootloader="grub2"
             bootloader_console="gfxterm"
-	    boottimeout="1"
+	        boottimeout="1"
             firmware="uefi"
             kernelcmdline="console=ttyS0,115200 console=tty0 security=selinux selinux=1 quiet net.ifnames=0"
             bootpartition="false"
@@ -31,18 +34,16 @@
             btrfs_root_is_snapshot="true"
             btrfs_root_is_readonly_snapshot="true"
             btrfs_quota_groups="true"
-        >
+            ompressed="true"
+        > 
             <systemdisk>
                 <volume name="home"/>
                 <volume name="root"/>
-		<!-- on tmpfs jsc#SMO-2                <volume name="tmp"/> -->
- 		<volume name="opt"/>
-                <volume name="srv"/>
-                <volume name="boot/grub2/i386-pc"/>
+	            <volume name="boot/grub2/i386-pc"/>
                 <volume name="boot/grub2/x86_64-efi" mountpoint="boot/grub2/x86_64-efi"/>
                 <volume name="boot/writable"/>
-		<volume name="usr/local"/>
-		<volume name="var" copy_on_write="false"/>
+	         	<volume name="usr/local"/>
+		        <volume name="var" copy_on_write="false"/>
             </systemdisk>
         </type>
     </preferences>
