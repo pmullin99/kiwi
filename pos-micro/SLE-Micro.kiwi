@@ -16,10 +16,7 @@
         <bootloader-theme>SLE</bootloader-theme>
         <rpm-excludedocs>true</rpm-excludedocs>
         <locale>en_US</locale>
-        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>
-        
-
-        <type
+        <type 
             image="pxe"
 	        initrd_system="dracut"
             filesystem="btrfs"
@@ -34,7 +31,7 @@
             btrfs_root_is_snapshot="true"
             btrfs_root_is_readonly_snapshot="true"
             btrfs_quota_groups="true"
-            ompressed="true"
+            compressed="true"
         > 
             <systemdisk>
                 <volume name="home"/>
@@ -68,9 +65,8 @@
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
 	<package name="wpa_supplicant" arch="x86_64,aarch64"/>
-    <!-- include directly to avoid cockpit-machines (bsc#1196971)  -->
-	<package name="cockpit-system"/>
-	<package name="libpwquality-tools"/> <!-- dependency of cockpit-system not handled by kiwi properly -->
+  	<package name="cockpit-system"/>
+	<package name="libpwquality-tools"/> 
 	<package name="cockpit-ws"/>
 	<package name="cockpit"/>
 	<package name="cockpit-networkmanager"/>
