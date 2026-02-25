@@ -63,7 +63,6 @@
 	<package name="suseconnect-ng"/>
 	<package name="SL-Micro-release"/>
 	<package name="grub2-branding-SLE" arch="x86_64,aarch64"/>
-	<package name="systemd-presets-branding-SMO"/>
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
 	<package name="wpa_supplicant" arch="x86_64,aarch64"/>
@@ -83,7 +82,7 @@
     <package name="glibc-locale-base"/>
     <package name="ca-certificates"/>
 	<package name="SLE-Micro-release"/>
-	<package name="systemd-presets-branding-SMO"/>
+	
 	<package name="systemd-default-settings-branding-SLE-Micro"/>
 	<package name="firewalld"/>
     <package name="ignition"/>
