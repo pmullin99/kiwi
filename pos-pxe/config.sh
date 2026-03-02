@@ -124,6 +124,7 @@ systemctl enable xrdp
 if [ -f /etc/chrony.conf ]; then
     systemctl enable chronyd.service
 fi
+systemctl enable venv-salt-minion.service
 
 # only for debugging
 #systemctl enable debug-shell.service
