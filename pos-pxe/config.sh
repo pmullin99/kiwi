@@ -117,6 +117,7 @@ fi
 #--------------------------------------
 systemctl enable sshd
 systemctl enable xrdp
+systemctl enable venv-salt-minion
 
 #=====================================
 # Enable chrony if installed
@@ -124,7 +125,6 @@ systemctl enable xrdp
 if [ -f /etc/chrony.conf ]; then
     systemctl enable chronyd.service
 fi
-systemctl enable venv-salt-minion.service
 
 # only for debugging
 #systemctl enable debug-shell.service

@@ -59,8 +59,11 @@
         <package name="iproute2"/> 
         <package name="openssh"/>
         <package name="rsync"/>
-         <package name="xterm"/>
-
+        <package name="xterm"/>
+        <package name="sudo"/>
+        <package name="xrandr"/>
+        <package name="kernel-default"/>
+        
         <!-- Only for btrfs
         <package name="btrfsprogs"/>
         <package name="btrfsmaintenance"/>
@@ -69,16 +72,11 @@
         <package name="rollback-helper"/>
         <package name="snapper"/>
         -->
-
-        <package name="kernel-default"/>
-        <!-- package name="yast2-firstboot"/ -->
-        <package name="xrandr"/>
-
+  
         <!-- packages for saltboot and SUSE Manager -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
 	    <package name="dracut-saltboot"/>
-
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
