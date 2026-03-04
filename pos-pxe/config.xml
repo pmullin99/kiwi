@@ -19,7 +19,7 @@
 
         <rpm-excludedocs>true</rpm-excludedocs>
         <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type filesystem="ext3" image="pxe" initrd_system="dracut" compressed="true"></type>
+        <type filesystem="ext4" image="pxe" initrd_system="dracut" compressed="true"></type>
     </preferences>
 
     <users>
@@ -63,6 +63,7 @@
         <package name="sudo"/>
         <package name="xrandr"/>
         <package name="kernel-default"/>
+         <package name="yast2-firstboot"/>
         
         <!-- Only for btrfs
         <package name="btrfsprogs"/>
