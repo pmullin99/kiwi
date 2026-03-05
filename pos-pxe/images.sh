@@ -22,7 +22,7 @@
 test -f /.kconfig && . /.kconfig
 test -f /.profile && . /.profile
 
-#if [ -f /usr/bin/venv-salt-call ] ; then
+if [ -f /usr/bin/venv-salt-call ] ; then
 systemctl enable venv-salt-minion.service
 
   # notify SUSE Manager about newly deployed image
