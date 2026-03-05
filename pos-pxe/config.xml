@@ -63,7 +63,8 @@
         <package name="sudo"/>
         <package name="xrandr"/>
         <package name="kernel-default"/>
-         <package name="yast2-firstboot"/>
+        <package name="yast2-firstboot"/>
+         <package name="supportutils"/>
         
         <!-- Only for btrfs
         <package name="btrfsprogs"/>
