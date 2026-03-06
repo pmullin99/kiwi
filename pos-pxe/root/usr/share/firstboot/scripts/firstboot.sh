@@ -7,5 +7,11 @@ rm /var/lib/zypp/AnonymousUniqueId
 dbus-uuidgen --ensure
 systemd-machine-id-setup
 
+HOSTNAME=$(hostname -f)
+
+echo $HOSTNAME > /etc/venv-salt-minion/minion_id
+
 ## Enable salt minion
-systemctl enable --now venv-salt-minion
+systemctl restart venv-salt-minion
+
+
