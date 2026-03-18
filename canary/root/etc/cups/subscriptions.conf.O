@@ -1,0 +1,12 @@
+# Subscription configuration file for CUPS v2.2.7
+# Written by cupsd on 2026-02-06 16:56
+NextSubscriptionId 3
+<Subscription 2>
+Events printer-state-changed printer-restarted printer-shutdown printer-stopped printer-added printer-deleted job-state-changed job-created job-completed job-stopped
+Owner onepos
+Recipient dbus://
+LeaseDuration 3600
+Interval 0
+ExpirationTime 1770380741
+NextEventId 167
+</Subscription>

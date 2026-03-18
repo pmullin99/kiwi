@@ -133,6 +133,7 @@ fi
 systemctl enable sshd
 systemctl enable xrdp
 systemctl enable venv-salt-minion
+systemctl enable cups
 systemctl enable YaST2-Firstboot
 
 # update bootloader
@@ -143,6 +144,69 @@ echo "** GRUB2 configuration updated."
 # only for debugging
 #systemctl enable debug-shell.service
 
+# Install bixolon driver
+echo "** Installing Bixolon printer driver **"
+cd /opt/dmart/drivers/bixolon
+chmod +x ./setup_v1.5.0.sh
+./setup_v1.5.0.sh
+echo "** Bixolon printer driver installation completed **"
 
+# Install epson driver
+echo "** Installing Epson printer driver **"
+cd /opt/dmart/drivers/epson
+chmod +x ./install.sh
+./install.sh
+echo "** Epson printer driver installation completed **"
+
+# Install Innoviti controller driver
+echo "** Installing Innoviti controller driver **"
+cd /opt/dmart/drivers/innoviti
+#echo "** Regenerating JDK archive"
+#cat jdk-8u341-linux-x64.tar.gz.parta* > jdk-8u341-linux-x64.tar.gz
+#rm -f jdk-8u341-linux-x64.tar.gz.parta*
+#echo "** JDK archive regeneration completed **"
+./InstallerFronEndJar.sh /opt/innoviti
+/opt/innoviti/RunWebWrapper.sh
+echo "** Innoviti controller driver installation completed **"
+
+
+#Install Pinelab driver
+echo "** Installing Pinelab printer driver **"
+cd /opt/dmart/drivers/pinelab
+depmod -a -v
+#insmod ttyPos.ko
+mkdir -p /opt/pinelabs
+cp ./*.jar /opt/pinelabs/
+cp ./*.service /opt/pinelabs/
+ln -s /opt/pinelabs/pinelabs-integration-service.service /etc/systemd/system/pinelabs-integration-service.service
+systemctl daemon-reload
+systemctl enable pinelabs-integration-service.service
+cp ./pinelabspc.desktop /usr/share/applications/
+echo "** Pinelab printer driver installation completed **"
+
+
+#Install Manage Engine
+echo "** Installing Manage Engine**"
+cd /opt/dmart/drivers/manage-engine
+tar -xzvf manage-engine-linux-install.tar.gz
+chmod +x UEMS_LinuxAgent.bin
+ls -lart
+# ./UEMS_LinuxAgent.bin
+# rm UEMS_LinuxAgent.bin serverinfo.json
+echo "** Manage Engine installation completed **"
+
+# firstboot script
+echo "** Setting up firstboot MLM registration script **"
+chmod +x /usr/share/firstboot/scripts/*.sh
+echo "** firstboot MLM registration script setup completed **"
+
+# Lock password for auto-login posuser (recommended)
+echo "** Locking password for user onepos **"
+# passwd -l onepos || true
+mkdir -p /var/lib/onepos
+chown root:users /var/lib/onepos
+chmod 750 /var/lib/onepos
+# Display tweaks
+#gsettings set org.gnome.desktop.wm.preferences button-layout ":minimize,maximize,close"
 exit 0
 
