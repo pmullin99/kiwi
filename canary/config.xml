@@ -145,7 +145,7 @@
         <!-- <package name="gcc-c++" /> -->
         <package name="cups-devel"/>
         <package name="cron"/>
-        <!-- package name="java-1_8_0-openjdk"/ -->
+        <package name="java-1_8_0-openjdk">
         <package name="google-poppins-fonts"/>
 
     </packages>
