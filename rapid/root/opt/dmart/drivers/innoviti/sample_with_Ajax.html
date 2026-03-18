@@ -1,0 +1,27 @@
+<html>
+<body>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Update User</title>
+
+<script>
+function loadXMLDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+    	alert(this.responseText);
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "http://localhost/innoweb/api/MSwipe?value=0,0,123,200", true);
+ // xhttp.open("DELETE", "http://localhost:8080/RestWebService/user/service", true);
+  xhttp.send();
+}
+</script>
+
+</body>
+<div id="demo">
+<button type="button" onclick="loadXMLDoc()">Change Content</button>
+</div>
+</html>

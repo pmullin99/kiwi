@@ -1,0 +1,17 @@
+[Unit]
+Description=Pinelabs Integration Service
+After=network.target
+
+[Service]
+User=nobody
+WorkingDirectory=/opt/pinelabs/
+ExecStart=java -jar /opt/pinelabs/pinelabs-integration-service.jar --server.port=8081
+SuccessExitStatus=143
+Restart=on-failure
+RestartSec=5
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=pinelabs-integration-service
+
+[Install]
+WantedBy=multi-user.target

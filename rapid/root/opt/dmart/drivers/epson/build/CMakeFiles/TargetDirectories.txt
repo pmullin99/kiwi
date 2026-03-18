@@ -1,0 +1,3 @@
+/opt/epson/Epson/Thermal Receipt/build/CMakeFiles/rastertotmtr.dir
+/opt/epson/Epson/Thermal Receipt/build/CMakeFiles/edit_cache.dir
+/opt/epson/Epson/Thermal Receipt/build/CMakeFiles/rebuild_cache.dir

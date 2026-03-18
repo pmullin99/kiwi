@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=PineLabs PC
+Comment=PineLabs Pad Controller
+Exec=java -jar /opt/pinelabs/PADController_JAVA_20241108.jar
+Terminal=false
+Type=Application
+Categories=Utility;Development;
+StartupWMClass=pinelabspc
