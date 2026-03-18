@@ -142,7 +142,7 @@
         <package name="gnome-terminal" />
         <!-- <package name="cmake" />/ -->
         <!-- <package name="gcc" /> -->
-        <!-- <package name="gcc-c++" /> /-->
+        <!-- <package name="gcc-c++" /> -->
         <package name="cups-devel"/>
         <package name="cron"/>
         <package name="java-1_8_0-openjdk"/>
