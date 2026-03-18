@@ -130,7 +130,7 @@
         <package name="ghostscript-fonts-other" />
 
         <!-- Packages for MeraDMart build-->
-        <!-- package name="onepos" / -->
+        <!-- <package name="onepos" /> -->
         <package name="yast2" />
         <package name="yast2-firstboot" />
         <package name="cups" />
@@ -140,8 +140,8 @@
         <!-- <package name="unzip" /> -->
         <package name="libwebkit2gtk-4_0-37" />
         <package name="gnome-terminal" />
-        <!-- <package name="cmake" />/ -->
-        <!-- <package name="gcc" /> -->
+        <!-- <package name="cmake" /> /-->
+        <!-- <package name="gcc" /> /-->
         <!-- <package name="gcc-c++" /> -->
         <package name="cups-devel"/>
         <package name="cron"/>
