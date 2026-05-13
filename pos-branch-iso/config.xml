@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<image schemaversion="6.1" name="pos-pxe">
+<image schemaversion="6.1" name="pos-iso">
     <description type="system">
         <author>Admin User</author>
-        <contact>noemail@example.com</contact>
-        <specification>SUSE Linux Enterprise 15 SP7 Graphical Image</specification>
+        <contact>admin@example.com</contact>
+        <specification>SUSE Linux Enterprise 15 SP7 Branch Server</specification>
     </description>
+   
     <preferences>
-        <version>7.1.3</version>
+        <version>1.0.1</version>
         <packagemanager>zypper</packagemanager>
         <bootsplash-theme>SLE</bootsplash-theme>
         <bootloader-theme>SLE</bootloader-theme>
-
         <locale>en_US</locale>
         <keytable>us</keytable>
         <timezone>Asia/Singapore</timezone>
-        <hwclock>utc</hwclock>
-
+        <hwclock>utc</hwclock>   
         <rpm-excludedocs>true</rpm-excludedocs>
-        <!-- add luks="password" attribute below in order to generate encrypted image -->
-        <type filesystem="ext4" image="pxe" initrd_system="dracut" compressed="true"></type>
+
+        <type image="oem" filesystem="ext4" installiso="true" initrd_system="dracut" kernelcmdline="splash" firmware="efi">
+            <oemconfig>
+                <!-- oem-systemsize>2048</oem-systemsize -->
+                <oem-swap>true</oem-swap>
+                <oem-device-filter>/dev/ram</oem-device-filter>
+                <oem-multipath-scan>false</oem-multipath-scan>
+            </oemconfig>
+        </type>
+  
     </preferences>
 
     <users>
-        <user password="$6$tZBpY.eXto4Ko2tb$hKSl4PIUoA1X9m/w9uBayfOZjwctjKJ3WlzqUG7jC6JXTFSI6nlqr9FwOBw0surbSM2wIW1TZLq.739kX1P5U." home="/root" name="root" groups="root"/>
-         <user password="$6$tZBpY.eXto4Ko2tb$hKSl4PIUoA1X9m/w9uBayfOZjwctjKJ3WlzqUG7jC6JXTFSI6nlqr9FwOBw0surbSM2wIW1TZLq.739kX1P5U." home="/home/tux" name="tux" groups="users"/>
+        <user password="$6$D4qx/cGOoxgvsI4x$/UqkQqQGGviyxOZ4pzKA34oW9TvRTudHzI5V1L3O3jJv6k2t1EGZ4cBNHwnwDQsvAWo2Nr.cLlHxZnacQ.m4/0" home="/root" name="root" groups="root"/>
     </users>
 
     <packages type="image">
@@ -59,26 +65,32 @@
         <package name="iproute2"/> 
         <package name="openssh"/>
         <package name="rsync"/>
+        <package name="xrdp"/>
         <package name="xterm"/>
-        <package name="sudo"/>
-        <package name="xrandr"/>
         <package name="kernel-default"/>
         <package name="yast2-firstboot"/>
-         <package name="supportutils"/>
+        <package name="xrandr"/>
         
-        <!-- Only for btrfs
-        <package name="btrfsprogs"/>
-        <package name="btrfsmaintenance"/>
-        <package name="grub2-snapper-plugin"/>
-        <package name="snapper-zypp-plugin"/>
-        <package name="rollback-helper"/>
-        <package name="snapper"/>
-        -->
-  
-        <!-- packages for saltboot and SUSE Manager -->
+        <!-- packages for MLM and kiwi image build -->
         <package name="hostname"/>
 	    <package name="venv-salt-minion"/>
-	    <package name="dracut-saltboot"/>
+        <package name="dracut-kiwi-oem-repart"/>
+        <package name="dracut-kiwi-oem-dump"/>
+        
+        <!-- packages for AD intigration
+        <package name="krb5-client"/>
+        <package name="openldap2-client"/>
+        <package name="sssd"/>
+        <package name="sssd-tools"/>
+        <package name="sssd-ad"/>
+        <package name="adcli"/>
+        <package name="sssd-ldap"/>
+        <package name="cyrus-sasl-gssapi"/>
+        <package name="krb5-plugin-preauth-pkinit"/ -->
+         
+        <!-- Added for VMware images -->
+        <package name="open-vm-tools"/>
+        
         <package name="mdadm"/>
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
@@ -97,13 +109,13 @@
         <package name="fontconfig"/>
         <package name="fonts-config"/>
         <package name="noto-sans-fonts"/>
-        <package name="xfsprogs"/>              <!-- can be optionaly removed if XFS will not be used -->
+        <!-- package name="xfsprogs"/ -->              <!-- can be optionaly removed if XFS will not be used -->
         <package name="busybox"/>               <!-- this is needed if tftp is used for background image downloading -->
         <package name="bind-utils"/>
         <package name="kiwi-tools"/>
         <package name="dosfstools"/>
 
-        <!-- packages specific for Graphical image -->
+        <!-- packages specific for Graphical image 
         <package name="patterns-gnome-gnome_basic"/>
         <package name="patterns-base-x11"/>
         <package name="xorg-x11-server"/>
@@ -117,10 +129,9 @@
         <package name="alsa"/>
         <package name="pulseaudio"/>
         <package name="MozillaFirefox"/>
-        <package name="nautilus"/>
-        <package name="xrdp"/>
+        <package name="nautilus"/ -->
 
-        <!-- Themes and branding -->
+        <!-- Themes and branding 
         <package name="gnome-menus-branding-SLE"/>
         <package name="gtk2-metatheme-adwaita"/>
         <package name="gtk3-metatheme-adwaita"/>
@@ -128,15 +139,15 @@
         <package name="branding-SLE"/>
         <package name="gio-branding-SLE"/>
         <package name="MozillaFirefox-branding-SLE"/>
-        <package name="gnome-shell-classic"/>
+        <package name="gnome-shell-classic"/ -->
 
-        <!-- Fonts -->
+        <!-- Fonts 
         <package name="liberation-fonts"/>
         <package name="google-opensans-fonts"/>
         <package name="cantarell-fonts"/>
         <package name="dejavu-fonts"/>
         <package name="ghostscript-fonts-std"/>
-        <package name="ghostscript-fonts-other"/>
+        <package name="ghostscript-fonts-other"/ -->
 
     </packages>
     <packages type="bootstrap">
@@ -145,7 +156,6 @@
         <package name="glibc-locale-base"/>
         <package name="ca-certificates-mozilla"/>
         <package name="sles-release"/>
-    
     </packages>
 <!--  No packages to delete -->
 </image>
