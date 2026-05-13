@@ -83,6 +83,7 @@
         <package name="kernel-firmware"/>
         <package name="kexec-tools"/>
         <package name="dmidecode"/>
+        <package name="open-vm-tools"/>
 
         <!-- uncomment here to enable wireless boot
         <package name="dracut-wireless"/>
