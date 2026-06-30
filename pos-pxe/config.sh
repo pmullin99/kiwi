@@ -117,7 +117,7 @@ fi
 #--------------------------------------
 systemctl enable sshd
 systemctl enable xrdp
-systemctl enable venv-salt-minion
+#systemctl enable venv-salt-minion
 
 #=====================================
 # Enable chrony if installed
