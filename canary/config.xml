@@ -3,8 +3,8 @@
 <image schemaversion="6.1" name="DMartOnePos">
     <description type="system">
         <author>Harikrishnan M</author>
-        <contact>haririshnan.m@ddmartlabs.com</contact>
-        <specification>OnePoS Image (OEM Installer)</specification>
+        <contact>harikrishnan.m@dmartlabs.com</contact>
+        <specification>OnePoS Image (PXE Installer)</specification>
     </description>
 
     <preferences>
@@ -20,8 +20,7 @@
         <hwclock>utc</hwclock>
 
         <rpm-excludedocs>true</rpm-excludedocs>
-        <type image="oem" installiso="true" primary="true" firmware="efi" kernelcmdline="splash"
-            filesystem="ext4" />
+        <type filesystem="ext4" image="pxe" initrd_system="dracut" compressed="true"></type>
     </preferences>
 
     <users>
@@ -34,6 +33,8 @@
     </users>
 
     <packages type="image">
+        <package name="dracut-saltboot"/> <!-- needed for pxe-boot-installation -->
+        <package name="busybox"/> <!-- needed for pxe-boot-installation -->
         <package name="patterns-base-minimal_base" />
         <package name="aaa_base-extras" /> <!-- wouldn't be SUSE without that ;-) -->
         <package name="acl" />
@@ -130,7 +131,7 @@
         <package name="ghostscript-fonts-other" />
 
         <!-- Packages for MeraDMart build-->
-        <!-- package name="onepos"  -->
+        <package name="onepos" />
         <package name="yast2" />
         <package name="yast2-firstboot" />
         <package name="cups" />
@@ -138,7 +139,7 @@
         <package name="ghostscript" />
         <!-- <package name="sudo" /> -->
         <!-- <package name="unzip" /> -->
-        <package name="libwebkit2gtk-4_0-37" />
+        <package name="libwebkit2gtk-4_0-37-2.50.4-150600.12.54.1" />
         <package name="gnome-terminal" />
         <!-- <package name="cmake" />/ -->
         <!-- <package name="gcc" /> -->
@@ -159,9 +160,3 @@
     </packages>
 
 </image>
-
-
-
-
-
-
