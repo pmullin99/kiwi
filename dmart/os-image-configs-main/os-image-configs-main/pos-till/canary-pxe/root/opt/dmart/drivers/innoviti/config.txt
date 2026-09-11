@@ -1,0 +1,10 @@
+<Start>
+	<Registry>
+<PortName></PortName>
+<DIAL_STATUS>0</DIAL_STATUS>
+<HostIP></HostIP>
+<HostPort></HostPort>
+<ConnectionToken>P</ConnectionToken>
+<ListeningPort>90</ListeningPort>
+	</Registry>
+</Start>
