@@ -41,3 +41,6 @@ fi
 
 # install bootloader and generate boot menu
 systemctl enable install-local-bootloader.service
+
+# Set firstboot permissions
+chmod +x /usr/share/firstboot/scripts/firstboot.sh

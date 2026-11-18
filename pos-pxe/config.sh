@@ -126,6 +126,8 @@ if [ -f /etc/chrony.conf ]; then
     systemctl enable chronyd.service
 fi
 
+chmod +x /usr/share/firstboot/scripts/firstboot.sh
+
 # only for debugging
 #systemctl enable debug-shell.service
 
