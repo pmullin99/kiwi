@@ -83,6 +83,7 @@
         <package name="kbd"/>
         <package name="binutils"/>
         <package name="sg3_utils"/>
+        <package name="udev"/>
     </packages>
 
     <!-- Bootstrap Packages -->
