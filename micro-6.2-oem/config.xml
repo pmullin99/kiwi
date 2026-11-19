@@ -54,10 +54,11 @@
     <!-- Core Packages Required for SLE Micro 6.2 OEM ISO -->
     <packages type="image" patternType="onlyRequired">
         <package name="SL-Micro-release"/>
-        <package name="patterns-micro-base"/>
+        <package name="patterns-base-base"/>
+        <package name="patterns-base-system"/>
         <package name="patterns-micro-defaults"/>
         <package name="patterns-micro-hardware"/>
-        <package name="patterns-micro-selinux"/>
+        <package name="patterns-base-selinux"/>
         <package name="kernel-default"/>
         <package name="grub2"/>
         <package name="grub2-x86_64-efi" arch="x86_64"/>
