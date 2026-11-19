@@ -58,12 +58,6 @@ blacklist {
 EOF
 
 #======================================
-# Rebuild target initrd with multipath.conf & rules
-#--------------------------------------
-KVER=$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel-default | tail -n 1)
-dracut --force --no-hostonly "/boot/initrd-${KVER}" "${KVER}"
-
-#======================================
 # 4. SELinux Relabeling Marker
 #--------------------------------------
 touch /.autorelabel
