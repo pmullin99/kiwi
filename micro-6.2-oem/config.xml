@@ -55,7 +55,7 @@
     <packages type="image" patternType="onlyRequired">
         <package name="SL-Micro-release"/>
         <package name="patterns-base-base"/>
-        <package name="patterns-basesystem"/>
+        <package name="patterns-base-basesystem"/>
         <package name="patterns-micro-defaults"/>
         <package name="patterns-micro-hardware"/>
         <package name="patterns-base-selinux"/>
