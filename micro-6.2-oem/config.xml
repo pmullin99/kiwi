@@ -81,6 +81,7 @@
         <package name="dracut-kiwi-lib"/>
         <package name="kpartx"/>
         <package name="kbd"/>
+        <package name="binutils"/>
     </packages>
 
     <!-- Bootstrap Packages -->
