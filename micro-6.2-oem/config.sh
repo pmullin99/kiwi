@@ -57,13 +57,11 @@ blacklist {
 
 EOF
 
-# Force dracut to include the multipath module and config in the initrd
-mkdir -p /etc/dracut.conf.d
-cat << 'EOF' > /etc/dracut.conf.d/10-multipath.conf
-force_drivers+=" dm-multipath "
-add_dracutmodules+=" multipath "
-install_items+=" /etc/multipath.conf "
-EOF
+#======================================
+# Rebuild target initrd with multipath.conf & rules
+#--------------------------------------
+KVER=$(rpm -q --qf '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel-default | tail -n 1)
+dracut --force --no-hostonly "/boot/initrd-${KVER}" "${KVER}"
 
 #======================================
 # 4. SELinux Relabeling Marker
