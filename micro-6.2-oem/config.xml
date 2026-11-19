@@ -12,7 +12,7 @@
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>true</rpm-check-signatures>
         <locale>en_US</locale>
-        <keytable>us.map.gz</keytable>
+        <keytable>us</keytable>
         <timezone>UTC</timezone>
 
         <type image="oem"
@@ -79,7 +79,8 @@
         <package name="dracut-kiwi-oem-dump"/>
         <package name="multipath-tools"/>
         <package name="dracut-kiwi-lib"/>
-        <package name="kpartx"/>  
+        <package name="kpartx"/>
+        <package name="kbd"/>
     </packages>
 
     <!-- Bootstrap Packages -->
