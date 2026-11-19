@@ -27,12 +27,11 @@
               bootpartition="false"
               bootkernel="custom"
               devicepersistency="by-uuid"
-              btrfs_root_is_snapshot="true"
               btrfs_root_is_readonly_snapshot="true"
+              btrfs_root_is_snapper_snapshot="true"
               btrfs_quota_groups="true"
               installiso="true"
               installstick="false"
-              hybridpersistent="false"
               kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">
             <bootloader name="grub2" console="gfxterm" timeout="5"/>
             <size unit="G">20</size>
@@ -66,20 +65,19 @@
         <keytable>us.map.gz</keytable>
         <timezone>UTC</timezone>
 
-        <type image="oem"
+    <type image="oem"
               initrd_system="dracut"
               filesystem="btrfs"
               firmware="uefi"
               bootpartition="false"
               bootkernel="custom"
               devicepersistency="by-uuid"
-              btrfs_root_is_snapshot="true"
               btrfs_root_is_readonly_snapshot="true"
+              btrfs_root_is_snapper_snapshot="true"
               btrfs_quota_groups="true"
               installiso="true"
               installstick="false"
-              hybridpersistent="false"
-              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">
+              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">   
             <bootloader name="grub2" console="gfxterm" timeout="5"/>
             <size unit="G">20</size>
             <oemconfig>
