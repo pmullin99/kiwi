@@ -49,6 +49,12 @@ defaults {
     user_friendly_names yes
     find_multipaths yes
 }
+
+blacklist {
+    devnode "^(ram|zram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
+    devnode "^hd[a-z]"
+}
+
 EOF
 
 # Force dracut to include the multipath module and config in the initrd

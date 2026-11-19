@@ -82,6 +82,7 @@
         <package name="kpartx"/>
         <package name="kbd"/>
         <package name="binutils"/>
+        <package name="sg3_utils"/>
     </packages>
 
     <!-- Bootstrap Packages -->
