@@ -83,7 +83,8 @@
         <package name="kbd"/>
         <package name="binutils"/>
         <package name="sg3_utils"/>
-        <package name="udev"/>
+        <package name="udev"/>\
+        <package name="device-mapper"/>
     </packages>
 
     <!-- Bootstrap Packages -->
