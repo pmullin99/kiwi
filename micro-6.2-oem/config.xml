@@ -77,7 +77,6 @@
         <package name="openssh"/>
         <package name="dracut-kiwi-oem-repart"/>
         <package name="dracut-kiwi-oem-dump"/>
-        <package name="dracut-kiwi-live"/>
         <package name="multipath-tools"/>
         <package name="dracut-kiwi-lib"/>
         <package name="kpartx"/>  
