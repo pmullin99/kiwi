@@ -27,7 +27,7 @@
               btrfs_quota_groups="true"
               installiso="true"
               installstick="false"
-              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">
+              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0 rd.kiwi.debug rd.debug rd.shell">
             <bootloader name="grub2" console="gfxterm" timeout="5"/>
             <size unit="G">20</size>
             <oemconfig>
