@@ -32,7 +32,7 @@
             <size unit="G">20</size>
             <oemconfig>
                 <oem-swap>false</oem-swap>
-                <oem-multipath-scan>false</oem-multipath-scan>
+                <oem-multipath-scan>true</oem-multipath-scan>
                 <oem-resize>true</oem-resize>
                 <oem-silent-boot>false</oem-silent-boot>
                 <oem-unattended>false</oem-unattended>
@@ -55,7 +55,7 @@
     <packages type="image" patternType="onlyRequired">
         <package name="SL-Micro-release"/>
         <package name="patterns-base-base"/>
-        <package name="patterns-base-system"/>
+        <package name="patterns-basesystem"/>
         <package name="patterns-micro-defaults"/>
         <package name="patterns-micro-hardware"/>
         <package name="patterns-base-selinux"/>
@@ -78,6 +78,9 @@
         <package name="dracut-kiwi-oem-repart"/>
         <package name="dracut-kiwi-oem-dump"/>
         <package name="dracut-kiwi-live"/>
+        <package name="multipath-tools"/>
+        <package name="dracut-kiwi-lib"/>
+        <package name="kpartx"/>  
     </packages>
 
     <!-- Bootstrap Packages -->
@@ -86,5 +89,6 @@
         <package name="glibc-locale-base"/>
         <package name="SL-Micro-release"/>
         <package name="ca-certificates-mozilla"/>
+        <package name="multipath-tools"/>
     </packages>
 </image>

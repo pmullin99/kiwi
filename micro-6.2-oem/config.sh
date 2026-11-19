@@ -39,6 +39,27 @@ Welcome to Custom OEM Appliance (SUSE Linux Micro 6.2) - Kernel \r (\l)
 EOF
 
 #======================================
+# Enable Multipath in Service & Initrd
+#--------------------------------------
+systemctl enable multipathd.service
+
+# Create a baseline /etc/multipath.conf so dracut includes it in the initrd
+cat << 'EOF' > /etc/multipath.conf
+defaults {
+    user_friendly_names yes
+    find_multipaths yes
+}
+EOF
+
+# Force dracut to include the multipath module and config in the initrd
+mkdir -p /etc/dracut.conf.d
+cat << 'EOF' > /etc/dracut.conf.d/10-multipath.conf
+force_drivers+=" dm-multipath "
+add_dracutmodules+=" multipath "
+install_items+=" /etc/multipath.conf "
+EOF
+
+#======================================
 # 4. SELinux Relabeling Marker
 #--------------------------------------
 touch /.autorelabel
