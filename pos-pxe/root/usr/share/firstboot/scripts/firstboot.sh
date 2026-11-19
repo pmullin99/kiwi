@@ -1,5 +1,7 @@
 #!/bin/bash
 
+touch /root/first_boot_started
+
 ## Reset machine ID
 #rm /etc/machine-id
 #rm /var/lib/dbus/machine-id
@@ -7,7 +9,7 @@
 #dbus-uuidgen --ensure
 #systemd-machine-id-setup
 
-HOSTNAME=$(hostname -f)
+HOSTNAME=$(hostname)
 
 echo $HOSTNAME > /etc/venv-salt-minion/minion_id
 

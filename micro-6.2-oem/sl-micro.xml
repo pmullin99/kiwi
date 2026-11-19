@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<image schemaversion="7.4" name="SL-Micro-6.2-OEM" displayname="SUSE Linux Micro 6.2 OEM">
+    <description type="system">
+        <author>OEM Engineering</author>
+        <contact>support@example.com</contact>
+        <specification>SUSE Linux Micro 6.2 OEM Self-Install ISO</specification>
+    </description>
+
+    <profiles>
+        <profile name="Base-SelfInstall" description="SL Micro 6.2 Base with Podman (Self-Install ISO)"/>
+        <profile name="Default-SelfInstall" description="SL Micro 6.2 with Cockpit, Virtualization, and Management Tools (Self-Install ISO)"/>
+    </profiles>
+
+    <!-- Base Self-Install Profile -->
+    <preferences profiles="Base-SelfInstall">
+        <version>6.2.0</version>
+        <packagemanager>zypper</packagemanager>
+        <rpm-check-signatures>true</rpm-check-signatures>
+        <locale>en_US</locale>
+        <keytable>us.map.gz</keytable>
+        <timezone>UTC</timezone>
+
+        <type image="oem"
+              initrd_system="dracut"
+              filesystem="btrfs"
+              firmware="uefi"
+              bootpartition="false"
+              bootkernel="custom"
+              devicepersistency="by-uuid"
+              btrfs_root_is_snapshot="true"
+              btrfs_root_is_readonly_snapshot="true"
+              btrfs_quota_groups="true"
+              installiso="true"
+              installstick="false"
+              hybridpersistent="false"
+              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">
+            <bootloader name="grub2" console="gfxterm" timeout="5"/>
+            <size unit="G">20</size>
+            <oemconfig>
+                <oem-swap>false</oem-swap>
+                <oem-multipath-scan>false</oem-multipath-scan>
+                <oem-resize>true</oem-resize>
+                <oem-silent-boot>false</oem-silent-boot>
+                <oem-unattended>false</oem-unattended>
+                <oem-boot-title>SUSE Linux Micro 6.2</oem-boot-title>
+            </oemconfig>
+            <systemdisk>
+                <volume name="@"/>
+                <volume name="home"/>
+                <volume name="opt"/>
+                <volume name="root"/>
+                <volume name="srv"/>
+                <volume name="tmp"/>
+                <volume name="usr/local"/>
+                <volume name="var" copy_on_write="false"/>
+            </systemdisk>
+        </type>
+    </preferences>
+
+    <!-- Default Self-Install Profile (Adds Cockpit / Virt / Salt) -->
+    <preferences profiles="Default-SelfInstall">
+        <version>6.2.0</version>
+        <packagemanager>zypper</packagemanager>
+        <rpm-check-signatures>true</rpm-check-signatures>
+        <locale>en_US</locale>
+        <keytable>us.map.gz</keytable>
+        <timezone>UTC</timezone>
+
+        <type image="oem"
+              initrd_system="dracut"
+              filesystem="btrfs"
+              firmware="uefi"
+              bootpartition="false"
+              bootkernel="custom"
+              devicepersistency="by-uuid"
+              btrfs_root_is_snapshot="true"
+              btrfs_root_is_readonly_snapshot="true"
+              btrfs_quota_groups="true"
+              installiso="true"
+              installstick="false"
+              hybridpersistent="false"
+              kernelcmdline="security=selinux selinux=1 enforcing=1 systemd.firstboot=off console=ttyS0,115200 console=tty0">
+            <bootloader name="grub2" console="gfxterm" timeout="5"/>
+            <size unit="G">20</size>
+            <oemconfig>
+                <oem-swap>false</oem-swap>
+                <oem-multipath-scan>false</oem-multipath-scan>
+                <oem-resize>true</oem-resize>
+                <oem-silent-boot>false</oem-silent-boot>
+                <oem-unattended>false</oem-unattended>
+                <oem-boot-title>SUSE Linux Micro 6.2</oem-boot-title>
+            </oemconfig>
+            <systemdisk>
+                <volume name="@"/>
+                <volume name="home"/>
+                <volume name="opt"/>
+                <volume name="root"/>
+                <volume name="srv"/>
+                <volume name="tmp"/>
+                <volume name="usr/local"/>
+                <volume name="var" copy_on_write="false"/>
+            </systemdisk>
+        </type>
+    </preferences>
+
+    <!-- Repositories: Update URIs to your RMT/SMT server or local repo mirror -->
+    <repository type="rpm-md" alias="SL-Micro-6.2-Pool" sourcetype="baseurl">
+        <source path="dir:///micro-sdk/repos/SL-Micro-6.2-Pool"/>
+    </repository>
+    <repository type="rpm-md" alias="SL-Micro-6.2-Updates" sourcetype="baseurl">
+        <source path="dir:///micro-sdk/repos/SL-Micro-6.2-Updates"/>
+    </repository>
+
+    <!-- Core Packages Required for SLE Micro 6.2 OEM ISO -->
+    <packages type="image" patternType="onlyRequired">
+        <package name="SL-Micro-release"/>
+        <package name="patterns-micro-base"/>
+        <package name="patterns-micro-defaults"/>
+        <package name="patterns-micro-hardware"/>
+        <package name="patterns-micro-selinux"/>
+        <package name="kernel-default"/>
+        <package name="grub2"/>
+        <package name="grub2-x86_64-efi" arch="x86_64"/>
+        <package name="grub2-arm64-efi" arch="aarch64"/>
+        <package name="shim" arch="x86_64"/>
+        <package name="efibootmgr"/>
+        <package name="btrfsprogs"/>
+        <package name="snapper"/>
+        <package name="transactional-update"/>
+        <package name="ignition"/>
+        <package name="combustion"/>
+        <package name="jeos-firstboot"/>
+        <package name="podman"/>
+        <package name="NetworkManager"/>
+        <package name="chrony"/>
+        <package name="openssh"/>
+        <package name="dracut-kiwi-oem-repart"/>
+        <package name="dracut-kiwi-oem-dump"/>
+        <package name="dracut-kiwi-live"/>
+    </packages>
+
+    <!-- Additional Packages for Default-SelfInstall Profile -->
+    <packages type="image" profiles="Default-SelfInstall" patternType="onlyRequired">
+        <package name="patterns-micro-cockpit"/>
+        <package name="cockpit-system"/>
+        <package name="cockpit-podman"/>
+        <package name="salt-minion"/>
+    </packages>
+
+    <!-- Bootstrap Packages -->
+    <packages type="bootstrap">
+        <package name="filesystem"/>
+        <package name="glibc-locale-base"/>
+        <package name="SL-Micro-release"/>
+        <package name="ca-certificates-mozilla"/>
+    </packages>
+</image>
