@@ -1174,6 +1174,7 @@
     <packages type="image" profiles="aarch64,rpi,rpi-self_install,aarch64-self_install,x86,x86-encrypted,aarch64-encrypted,x86-legacy,x86-self_install,x86-vmware,x86-qcow,aarch64-qcow,s390-kvm,s390-dasd,s390-fba,s390-fcp,ppc64le-512ss,ppc64le-4096ss,ppc64le-512ss-self_install,ppc64le-4096ss-self_install">
         <package name="kernel-default"/>
         <package name="kernel-firmware-all"/>
+        <package name="multipath-tools"/>
     </packages>
     <packages type="image" profiles="aarch64-64kb,aarch64-64kb-encrypted,aarch64-64kb-self_install">
         <package name="kernel-64kb"/>
