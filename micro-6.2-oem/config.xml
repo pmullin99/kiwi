@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<image schemaversion="7.4" name="SL-Micro-6.2-OEM" displayname="SUSE Linux Micro 6.2 OEM">
+<image schemaversion="7.5" name="SL-Micro-6.2-OEM" displayname="SUSE Linux Micro 6.2 OEM">
     <description type="system">
         <author>OEM Engineering</author>
         <contact>support@example.com</contact>
@@ -11,6 +11,9 @@
         <version>6.2.0</version>
         <packagemanager>zypper</packagemanager>
         <rpm-check-signatures>true</rpm-check-signatures>
+        <bootsplash-theme>SLE</bootsplash-theme>
+        <bootloader-theme>SLE</bootloader-theme>
+        <rpm-excludedocs>true</rpm-excludedocs>
         <locale>en_US</locale>
         <keytable>us</keytable>
         <timezone>UTC</timezone>
@@ -31,7 +34,7 @@
             <bootloader name="grub2" console="gfxterm" timeout="5"/>
             <size unit="G">20</size>
             <oemconfig>
-                <oem-swap>false</oem-swap>
+                <oem-swap>true</oem-swap>
                 <oem-multipath-scan>true</oem-multipath-scan>
                 <oem-resize>true</oem-resize>
                 <oem-silent-boot>false</oem-silent-boot>
@@ -52,7 +55,7 @@
     </preferences>
 
     <!-- Core Packages Required for SLE Micro 6.2 OEM ISO -->
-    <packages type="image" patternType="onlyRequired">
+    <packages type="image">
         <package name="SL-Micro-release"/>
         <package name="patterns-base-base"/>
         <package name="patterns-base-basesystem"/>

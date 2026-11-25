@@ -41,7 +41,9 @@ EOF
 #======================================
 # Enable Multipath in Service & Initrd
 #--------------------------------------
+# Enable multipathd for MP images
 systemctl enable multipathd.service
+
 
 # Create a baseline /etc/multipath.conf so dracut includes it in the initrd
 cat << 'EOF' > /etc/multipath.conf
