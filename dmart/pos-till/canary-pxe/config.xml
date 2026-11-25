@@ -131,7 +131,7 @@
         <package name="ghostscript-fonts-other" />
 
         <!-- Packages for MeraDMart build-->
-        <package name="onepos" />
+        <!-- package name="onepos" /-->
         <package name="yast2" />
         <package name="yast2-firstboot" />
         <package name="cups" />
