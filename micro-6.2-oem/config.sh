@@ -59,6 +59,10 @@ blacklist {
 
 EOF
 
+mkdir -p /etc/multipath
+chmod 0700 /etc/multipath
+ssh-keygen -A
+
 #======================================
 # 4. SELinux Relabeling Marker
 #--------------------------------------
