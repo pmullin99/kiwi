@@ -1055,10 +1055,10 @@
         </type>
     </preferences>
 
-
-   <repository type="rpm-md" >
-        <source path='obsrepositories:/'/>
-    </repository>
+    <users>
+        <user password="$6$tZBpY.eXto4Ko2tb$hKSl4PIUoA1X9m/w9uBayfOZjwctjKJ3WlzqUG7jC6JXTFSI6nlqr9FwOBw0surbSM2wIW1TZLq.739kX1P5U." home="/root" name="root" groups="root"/>
+         <user password="$6$tZBpY.eXto4Ko2tb$hKSl4PIUoA1X9m/w9uBayfOZjwctjKJ3WlzqUG7jC6JXTFSI6nlqr9FwOBw0surbSM2wIW1TZLq.739kX1P5U." home="/home/tux" name="tux" groups="users"/>
+    </users>
 
     <packages type="image" profiles="full">
         <namedCollection name="transactional_base"/>
