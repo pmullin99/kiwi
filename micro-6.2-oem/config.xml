@@ -1178,8 +1178,11 @@
         <package name="openssh-server"/>
         <package name="openssh-server-config-rootlogin"/>
         <package name="sysuser-shadow"/>
-        <package name="patterns-micro-base"/>
-        <package name="patterns-micro-defaults"/>
+        <package name="patterns-base-base"/>
+        <package name="patterns-base-basesystem"/>
+        <package name="patterns-base-bootloader"/>
+        <package name="patterns-base-transactional_base"/>
+        <package name="patterns-micro-hardware"/>
         <package name="transactional-update"/>
         <package name="btrfsprogs"/>
         <package name="snapper"/>
