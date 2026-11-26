@@ -1175,6 +1175,9 @@
         <package name="kernel-default"/>
         <package name="kernel-firmware-all"/>
         <package name="multipath-tools"/>
+        <package name="openssh-server"/>
+        <package name="openssh-server-config-rootlogin"/>
+        <package name="sysuser-shadow"/>
     </packages>
     <packages type="image" profiles="aarch64-64kb,aarch64-64kb-encrypted,aarch64-64kb-self_install">
         <package name="kernel-64kb"/>
