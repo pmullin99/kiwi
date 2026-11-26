@@ -1178,6 +1178,12 @@
         <package name="openssh-server"/>
         <package name="openssh-server-config-rootlogin"/>
         <package name="sysuser-shadow"/>
+        <package name="patterns-micro-base"/>
+        <package name="patterns-micro-defaults"/>
+        <package name="transactional-update"/>
+        <package name="btrfsprogs"/>
+        <package name="snapper"/>
+        <package name="open-vm-tools"/>
     </packages>
     <packages type="image" profiles="aarch64-64kb,aarch64-64kb-encrypted,aarch64-64kb-self_install">
         <package name="kernel-64kb"/>
