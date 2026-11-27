@@ -412,7 +412,7 @@
             install_continue_on_timeout="false"
             firmware="uefi"
             efipartsize="512"
-            kernelcmdline="console=tty0 security=selinux selinux=1 quiet systemd.show_status=1"
+            kernelcmdline="console=tty0 security=selinux selinux=1 quiet systemd.show_status=1 rd.multipath=default"
             bootpartition="false"
             bootkernel="custom"
             devicepersistency="by-uuid"

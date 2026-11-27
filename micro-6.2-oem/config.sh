@@ -38,38 +38,31 @@ Welcome to Custom OEM Appliance (SUSE Linux Micro 6.2) - Kernel \r (\l)
 
 EOF
 
-#======================================
-# Enable Multipath in Service & Initrd
-#--------------------------------------
-# Enable multipathd for MP images
-systemctl enable multipathd.service
-
-
-# Create a baseline /etc/multipath.conf so dracut includes it in the initrd
-cat << 'EOF' > /etc/multipath.conf
-defaults {
-    user_friendly_names yes
-    find_multipaths yes
-}
-
-blacklist {
-    devnode "^(ram|zram|raw|loop|fd|md|dm-|sr|scd|st)[0-9]*"
-    devnode "^hd[a-z]"
-}
-
-EOF
-
-
 ssh-keygen -A
 
+# Symlink grubenv into the writable /boot/writable subvolume
+mkdir -p /boot/writable /boot/grub2
+if [ -f /boot/grub2/grubenv ] && [ ! -L /boot/grub2/grubenv ]; then
+    mv /boot/grub2/grubenv /boot/writable/grubenv
+else
+    grub2-editenv /boot/writable/grubenv create
+fi
+ln -sf /boot/writable/grubenv /boot/grub2/grubenv
+
+# Initialize writable /etc overlayfs in /etc/fstab
+if [ -x /usr/sbin/setup-etc-overlayfs ]; then
+    /usr/sbin/setup-etc-overlayfs
+else
+    mkdir -p /var/lib/overlay/1/etc /var/lib/overlay/1/work-etc
+    grep -q "^overlay /etc " /etc/fstab || echo "overlay /etc overlay defaults,lowerdir=/etc,upperdir=/var/lib/overlay/1/etc,workdir=/var/lib/overlay/1/work-etc,x-systemd.requires-mounts-for=/var 0 0" >> /etc/fstab
+fi
+
+# Pre-initialize /etc/multipath and enable core services
 mkdir -p /etc/multipath /etc/multipath/conf.d
 chmod 0700 /etc/multipath
 touch /etc/multipath/bindings /etc/multipath/wwids
 chmod 0600 /etc/multipath/bindings /etc/multipath/wwids
-multipath -t > /etc/multipath.conf
-restorecon -Rv /etc/multipath /etc/multipath.conf || true
-systemctl enable multipathd.socket multipathd.service
-
+systemctl enable sshd.service multipathd.socket multipathd.service
 
 #======================================
 # 4. SELinux Relabeling Marker
