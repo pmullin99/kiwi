@@ -59,9 +59,17 @@ blacklist {
 
 EOF
 
-mkdir -p /etc/multipath
-chmod 0700 /etc/multipath
+
 ssh-keygen -A
+
+mkdir -p /etc/multipath /etc/multipath/conf.d
+chmod 0700 /etc/multipath
+touch /etc/multipath/bindings /etc/multipath/wwids
+chmod 0600 /etc/multipath/bindings /etc/multipath/wwids
+multipath -t > /etc/multipath.conf
+restorecon -Rv /etc/multipath /etc/multipath.conf || true
+systemctl enable multipathd.socket multipathd.service
+
 
 #======================================
 # 4. SELinux Relabeling Marker
